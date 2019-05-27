@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Квадрат Пифагора</title>
+<style>
+<!--
+table {
+	float:left;
+    border: 5px solid white;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+table td {
+	border: 1px solid black;
+}
+table td 
+{
+  table-layout:fixed;
+  width:50px;
+  height:20px;
+  overflow:hidden;
+  word-wrap:break-word;
+  text-align:center;
+}
+-->
+table {
+	border-spacing:0;
+	border-collapse: collapse;
+	float:left;
+	margin: 5px;
+	border-spacing:0;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+table td 
+{
+  table-layout:fixed;
+  width:50px;
+  height:20px;
+  overflow:hidden;
+  word-wrap:break-word;
+  text-align:center;
+}
+</style>
+<style>
+.button {
+  position: relative;
+  background-color: #f79646;
+  border: none;
+  font-size: 15px;
+  color: #FFFFFF;
+  padding: 5px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+</style>
+<style>
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+</style>
+
+</head>
+<body>
+
+<h2>Расчёт Квадрата Пифагора</h2>
+<div>
+<form autocomplete="off">
+  <input type="text" id="myText" value="26.05.1799;Пушкин" autocomplete="off" style="width:100%" onkeypress="return enterPressed(event)">
+  <div id="multipleInput">
+  <textarea id="myTextarea" style="height:100px;width:100%">
+26.10.1879;Троцкий
+13.03.1961;Елена Малышева
+</textarea>
+    <br/>
+    <input type="text" id="filter" value="" placeholder="Фильтр, пример: 33, 222, 55, 4" autocomplete="off" style="width:100%" style="" onkeypress="return enterPressed(event)">
+    </div>
+  <br/>
+<div>
+<label class="container" style="display:inline;">Несколько Человек
+  <input type="checkbox" onclick="switchInputMode();">
+  <span class="checkmark"></span>
+</label>
+<label class="container" style="display:inline;">Скрыть вспомогательные числа
+  <input type="checkbox" onclick="showHideAdditionalDigits();">
+  <span class="checkmark"></span>
+</label>
+</div>
+</form>
+<br/>
+</div>
+<button onclick="calcPifagors()" class="button" style="background-color: #4CAF50">Расcчитать</button>
+<!--<button type="button" onclick="SelectContent('copycontent');" class="button">Копировать Данные</button>-->
+<!--<button onclick="switchInputMode()" class="button">Один/Несколько Человек</button>-->
+<!--<button onclick="showHideAdditionalDigits()" class="button">Показать/Скрыть вспомогательные числа</button>-->
+<br/>
+<br/>
+<div id="copycontent">
+	<div id=tables style=""></div>
+</div>
+<script>
+
+var editMode = 0; //0 - single, 1 - multiple
+var hadMode = 0; //0 - show, 1 - hide
+showHideInputs();
+
+function switchInputMode() {
+	editMode = editMode == 0 ? 1 : 0;
+	showHideInputs();
+	calcPifagors();
+}
+
+function showHideAdditionalDigits() {
+	hadMode = hadMode == 0 ? 1 : 0;
+	calcPifagors();
+}
+
+function showHideInputs() {
+	var myText = document.getElementById("myText");
+	var multipleInput = document.getElementById("multipleInput");
+	if(editMode == 0) {
+		myText.style.display = "block";
+		multipleInput.style.display = "none";
+	} else {
+		myText.style.display = "none";
+		multipleInput.style.display = "block";
+	}
+}
+
+function enterPressed(e) {
+    //See notes about 'which' and 'key'
+    if (e.keyCode == 13) {
+        calcPifagors();
+        return false;
+    }
+}
+
+var C_GREEN = '#e6ffe6';
+var C_RED = '#ffe6e6';
+var C_YELLOW = "#fff5e6";
+var pifagorTablePrefix = 'pifagorTable_';
+
+var C_RED_BOLD = "font-family:Calibri;font-size:14px;color:#c00000;font-weight:bold;";
+var C_BLUE_BOLD = "font-family:Calibri;font-size:14px;color:#00b0f0;font-weight:bold;border: 1px double #f79646;";
+var C_LIGHT_DARK_BOLD = "font-family:Calibri;font-size:14px;color:#bfbfbf;font-weight:bold;";
+var C_LIGHT_DARK_BOLD_15 = "font-family:Calibri;font-size:15px;color:#bfbfbf;font-weight:bold;";
+var C_BLACK_ITALIC = "font-family:Calibri;font-size:12px;color:#000000;font-style:italic;";
+var C_BLACK_NORMAL = "font-family:Calibri;font-size:13px;color:#000000;";
+
+var C_BORDER_ORANGE_LB = "border-left: 1px solid #f79646;border-bottom: 1px solid #f79646;";
+var C_BORDER_BLACK_LB = "border-left: 1px solid black;border-bottom: 1px solid black;";
+
+function generatePifagorTable(index, personName) {
+	
+	var row;
+    //cell=new Array();
+    var tab=document.createElement('table');
+    tab.setAttribute('id', pifagorTablePrefix + index);
+   //tab.setAttribute('style','float:left;');
+
+    document.getElementById('tables').appendChild(tab);
+    
+    var row;
+    var rowIndex = 0;
+    
+    // header
+    row = tab.insertRow(rowIndex++);
+    var cell = row.insertCell(0);
+    cell.setAttribute('colspan', 6);
+	cell.setAttribute('style', C_RED_BOLD);
+    cell.innerHTML = personName;
+    
+    // 1 row
+    insertCells(
+    	tab.insertRow(rowIndex++), 
+    	['','','','','',''],
+		[C_LIGHT_DARK_BOLD,C_LIGHT_DARK_BOLD,C_LIGHT_DARK_BOLD,C_RED_BOLD,C_LIGHT_DARK_BOLD_15,C_LIGHT_DARK_BOLD_15], 
+    	['&nbsp;','&nbsp;','&nbsp;','&nbsp;','','']
+    );
+    
+    // 2 row
+    insertCells(
+    	tab.insertRow(rowIndex++), 
+		['','','','','',''],
+    	['','','',C_LIGHT_DARK_BOLD,C_LIGHT_DARK_BOLD,C_LIGHT_DARK_BOLD_15],
+    	['&nbsp;','&nbsp;','&nbsp;','&nbsp;','&nbsp;','']
+    );
+    
+    // 3 row
+    insertCells(
+    	tab.insertRow(rowIndex++), 
+    	['','','','','',''], 
+		[C_BLUE_BOLD,C_BLUE_BOLD,C_BLUE_BOLD,C_LIGHT_DARK_BOLD,C_LIGHT_DARK_BOLD,C_LIGHT_DARK_BOLD],
+    	['&nbsp;','&nbsp;','&nbsp;','&nbsp;','&nbsp;','&nbsp;']
+    );
+    
+    // 4 row
+    insertCells(
+    	tab.insertRow(rowIndex++),
+    	['','','','','',''],
+		[C_BLUE_BOLD,C_BLUE_BOLD,C_BLUE_BOLD,'',C_BLACK_ITALIC,C_BLACK_ITALIC],
+    	['&nbsp;','&nbsp;','&nbsp;','&nbsp;','1столб','2столб']
+    );
+    
+    // 5 row
+    insertCells(
+    	tab.insertRow(rowIndex++), 
+    	['','','','','',''], 
+		[C_BLUE_BOLD,C_BLUE_BOLD,C_BLUE_BOLD,'',C_BLACK_NORMAL,C_BLACK_NORMAL],
+    	['&nbsp;','&nbsp;','&nbsp;','&nbsp;','&nbsp;','&nbsp;']
+    );
+}
+
+function insertCells(row, bgColors, styles, values) {
+	for(var i = 0; i < bgColors.length; i++) {
+    	var cell = row.insertCell(i);
+        if(bgColors[i]) {
+            cell.setAttribute('bgcolor', bgColors[i]);
+        }
+		if(styles[i]) {
+			cell.setAttribute('style', styles[i]);
+        }
+        cell.innerHTML = values[i];
+    }
+}
+
+function parseDate(str) {
+    var dateParts = str.split(".");
+    if (dateParts.length != 3)
+        return null;
+    var year = dateParts[2];
+    var month = dateParts[1];
+    var day = dateParts[0];
+
+    if (isNaN(day) || isNaN(month) || isNaN(year))
+        return null;
+
+    var result = new Date(year, (month - 1), day);
+    if (result == null)
+        return null;
+    if (result.getDate() != day)
+        return null;
+    if (result.getMonth() != (month - 1))
+        return null;
+    if (result.getFullYear() != year)
+        return null;
+
+    return result;
+}
+
+function repeats(str, count) {
+	return Array(count+1).join(str);
+}
+
+function calcPifagor(dataBirthday, personName) {
+    
+  	var result = {
+		personName: '',
+		day: '',
+        month: '',
+        year: '',
+        A: '',
+        B: '',
+        V: '',
+        G: '',
+        D: '',
+        E: '',
+      	count1: 0,
+        count2: 0,
+        count3: 0,
+        count4: 0,
+        count5: 0,
+        count6: 0,
+        count7: 0,
+        count8: 0,
+        count9: 0,
+        stolb1: 0,
+        stolb2: 0,
+        errors: []
+        };
+    
+    result.id = uuidv4();
+    result.personName = personName;
+    
+    var errMsg = dataBirthday + " не корректная дата рождения (Пример 26.05.1799;Пушкин)";
+    
+    if (parseDate(dataBirthday) == null) {
+      result.errors.push(errMsg);
+      return result;
+    }
+    
+    var dataBirthdaySplited = dataBirthday.split(".");
+    
+    if(dataBirthdaySplited.length != 3) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    
+    var day = dataBirthdaySplited[0];
+    if(day.length != 2) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    
+    var dayInt = parseInt(day);
+    var day1 = parseInt(day.charAt(0));
+    var day2 = parseInt(day.charAt(1));
+    
+    var month = dataBirthdaySplited[1];
+    if(month.length != 2) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    var monthInt = parseInt(month);
+    var month1 = parseInt(month.charAt(0));
+    var month2 = parseInt(month.charAt(1));
+    
+    var year = dataBirthdaySplited[2];
+    if(year.length != 4) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    var yearInt = parseInt(year);
+    var year1 = parseInt(year.charAt(0));
+    var year2 = parseInt(year.charAt(1));
+    var year3 = parseInt(year.charAt(2));
+    var year4 = parseInt(year.charAt(3));
+    
+    var A = dayInt + monthInt + year1 + year2 + year3 + year4;
+    if(A > 59) {
+    	var AStr = A.toString();
+        var A1 = parseInt(AStr.charAt(0));
+    	var A2 = parseInt(AStr.charAt(1));
+        A = A1 + A2;
+    }
+    
+    var B = day1 + day2 + month1 + month2 + year1 + year2 + year3 + year4;
+    
+    var V = B;
+    if(B > 9) {
+    	var BStr = B.toString();
+        var B1 = parseInt(BStr.charAt(0));
+    	var B2 = parseInt(BStr.charAt(1));
+        V = B1 + B2;
+    }
+    
+    var G;
+    if(yearInt >= 1900 && yearInt < 2000) {
+    	G = -2;
+    } else if(yearInt >= 2000) {
+    	G = +19;
+    } else if(yearInt >= 1700 && yearInt < 1900) {
+    	G = +29;
+    } else {
+    	result.errors.push("Данный год не расчитать. Доступный год с 1700 и позже");
+		return result;
+    }
+    
+    var D = B + G;
+    
+    var E = D;
+    if(E > 9) {
+    	var DStr = D.toString();
+        var D1 = parseInt(DStr.charAt(0));
+    	var D2 = parseInt(DStr.charAt(1));
+        E = D1 + D2;
+    }
+    
+    var commonStr = day + month + year + B + V + G + D + E;
+    
+    var count1 = (commonStr.match(/1/g) || []).length;
+    var count2 = (commonStr.match(/2/g) || []).length;
+    var count3 = (commonStr.match(/3/g) || []).length;
+    var count4 = (commonStr.match(/4/g) || []).length;
+    var count5 = (commonStr.match(/5/g) || []).length;
+    var count6 = (commonStr.match(/6/g) || []).length;
+    var count7 = (commonStr.match(/7/g) || []).length;
+    var count8 = (commonStr.match(/8/g) || []).length;
+    var count9 = (commonStr.match(/9/g) || []).length;
+    
+    var stolb1 = count1 * 1 + count2 * 2 + count3 * 3;
+    var stolb2 = count4 * 4 + count5 * 5 + count6 * 6;
+    
+    result.day = day;
+    result.month = month;
+    result.year = year;
+    result.A = A; //'А=' + A;
+    result.B = B; //'Б=' + B;
+    result.V = V; //'В=' + V;
+    result.G = G; //'Г=' + G;
+    result.D = D; //'Д=' + D;
+    result.E = E; //'Е=' + E;
+    result.count1 = count1;
+    result.count2 = count2;
+    result.count3 = count3;
+    result.count4 = count4;
+    result.count5 = count5;
+    result.count6 = count6;
+    result.count7 = count7;
+    result.count8 = count8;
+    result.count9 = count9;
+    result.stolb1;
+    result.stolb2;
+    
+    /**
+    var pifagorTableId = uuidv4();
+    generatePifagorTable(pifagorTableId, personName);
+    
+    var rowIndex = 1;
+    var pifagorTableId = pifagorTablePrefix + pifagorTableId; 
+    console.log(document.getElementById(pifagorTableId));
+    // 1 row
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = day;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = month;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = year;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[3].innerHTML = A; //'А=' + A;
+    
+    // 2 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[3].innerHTML = B; //'Б=' + B;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[4].innerHTML = V; //'В=' + V;
+    
+    // 3 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = repeats("1",count1);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = repeats("4",count4);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = repeats("7",count7);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[3].innerHTML = G > 0 ? "+" + G : G; //'Г=' + G;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[4].innerHTML = D; //'Д=' + D;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[5].innerHTML = E; //'Е=' + E;
+    
+    // 4 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = repeats("2",count2);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = repeats("5",count5);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = repeats("8",count8);
+    
+    // 5 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = repeats("3",count3);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = repeats("6",count6);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = repeats("9",count9);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[4].innerHTML = stolb1;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[5].innerHTML = stolb2;
+    */
+    
+    return result;
+}
+
+function showAD(result) {
+	return hadMode == 0 ? result : '';
+}
+
+function fillData(result) {
+
+	var pifagorTableId = result.id;
+    generatePifagorTable(pifagorTableId, result.personName);
+    
+    var rowIndex = 1;
+    var pifagorTableId = pifagorTablePrefix + pifagorTableId; 
+    console.log(document.getElementById(pifagorTableId));
+    // 1 row
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = result.day;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = result.month;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = result.year;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[3].innerHTML = result.A; //'А=' + A;
+    
+    // 2 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[3].innerHTML = showAD(result.B); //'Б=' + B;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[4].innerHTML = showAD(result.V); //'В=' + V;
+    
+    // 3 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = repeats("1",result.count1);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = repeats("4",result.count4);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = repeats("7",result.count7);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[3].innerHTML = showAD(result.G > 0 ? "+" + result.G : result.G); //'Г=' + G;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[4].innerHTML = showAD(result.D); //'Д=' + D;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[5].innerHTML = showAD(result.E); //'Е=' + E;
+    
+    // 4 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = repeats("2",result.count2);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = repeats("5",result.count5);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = repeats("8",result.count8);
+    
+    // 5 row
+    rowIndex++;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[0].innerHTML = repeats("3",result.count3);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[1].innerHTML = repeats("6",result.count6);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[2].innerHTML = repeats("9",result.count9);
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[4].innerHTML = result.stolb1;
+    document.getElementById(pifagorTableId).rows[rowIndex].cells[5].innerHTML = result.stolb2;
+}
+
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+function getFilterData(result) {
+	var filter = document.getElementById("filter").value;
+    var filterResult = [];
+    if(filter) {
+    	filter = filter.trim();
+        var filterSplitted = filter.split(",");
+        for(var i=0; i<filterSplitted.length;i++) {
+        	var val = filterSplitted[i].trim();
+        	filterResult.push(val);
+        }
+    }
+    return filterResult;
+}
+
+function isApplicableForFilter(filterOriginal, filterArray, result) {
+	if(filterArray && filterArray.length > 0) {
+        
+        if(
+          (!filterOriginal.includes("1") || filterArray.includes(repeats("1",result.count1))) &&
+          (!filterOriginal.includes("2") || filterArray.includes(repeats("2",result.count2))) &&
+          (!filterOriginal.includes("3") || filterArray.includes(repeats("3",result.count3))) &&
+          (!filterOriginal.includes("4") || filterArray.includes(repeats("4",result.count4))) &&
+          (!filterOriginal.includes("5") || filterArray.includes(repeats("5",result.count5))) &&
+          (!filterOriginal.includes("6") || filterArray.includes(repeats("6",result.count6))) &&
+          (!filterOriginal.includes("7") || filterArray.includes(repeats("7",result.count7))) &&
+          (!filterOriginal.includes("8") || filterArray.includes(repeats("8",result.count8))) &&
+          (!filterOriginal.includes("9") || filterArray.includes(repeats("9",result.count9)))
+        ) {
+			return true;       		
+        }
+        return false;
+    }
+    
+    return true;
+    
+}
+
+function calcPifagors() {
+	var divTalbes = document.getElementById('tables');
+    //alert(divTalbes);
+    while (divTalbes.firstChild) {
+      divTalbes.removeChild(divTalbes.firstChild);
+  	}
+    
+    var errors = [];
+    if(editMode == 0) {
+		var dataBirthday = document.getElementById("myText").value;
+		if(dataBirthday && dataBirthday.trim()) {
+			dataBirthday = dataBirthday.trim();
+			dataBirthdayArray = dataBirthday.split(";");
+			var result = calcPifagor(dataBirthdayArray[0], dataBirthdayArray[1]);
+            if(result.errors.length > 0) {
+            	errors.push(result.errors);
+            } else {
+            	fillData(result);
+            }
+		}
+	} else {
+		var dataBirthdays = document.getElementById("myTextarea").value.split('\n');
+        var filterArray = getFilterData();
+        var filterOriginal = document.getElementById("filter").value;
+        for(var i = 0 ; i < dataBirthdays.length;i++){
+			if(dataBirthdays[i] && dataBirthdays[i].trim()) {
+				dataBirthday = dataBirthdays[i].trim();
+				dataBirthdayArray = dataBirthday.split(";");
+				var result = calcPifagor(dataBirthdayArray[0], dataBirthdayArray[1]);
+              	if(result.errors.length > 0) {
+                	errors.push(result.errors);
+                } else if(isApplicableForFilter(filterOriginal, filterArray,result)) {
+                	fillData(result);
+                }
+			}
+		}
+	}
+    
+    if(errors.length > 0) {
+    	alert(errors);
+    }
+    
+    //alert('as');
+	//calcPifagor('01.01.1984', 'Олег Газманов1');
+    //calcPifagor('02.01.1984', 'Олег Газманов2');
+    //calcPifagor('03.01.1984', 'Олег Газманов3');
+    //calcPifagor('04.01.1984', 'Олег Газманов4');
+    //calcPifagor('05.01.1984', 'Олег Газманов5');
+}
+calcPifagors();
+//generatePifagorTable(0, 'Олег Газманов');
+//generatePifagorTable(1, 'Газманов');
+//generatePifagorTable(2, 'Газманов');
+//generatePifagorTable(3, 'Газманов');
+//generatePifagorTable(4, 'Газманов');
+</script>
+
+<script type="text/javascript">
+function SelectContent (el) {    
+  var aux = document.createElement("div");
+  aux.setAttribute("contentEditable", true);
+  aux.innerHTML = document.getElementById("copycontent").innerHTML;
+  aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
+  document.body.appendChild(aux);
+  aux.focus();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+}
+</script>
+
+</body>
+</html>
