@@ -609,15 +609,15 @@ function isApplicableForFilter(filterOriginal, filterArray, result) {
 	if(filterArray && filterArray.length > 0) {
         
         if(
-          (!filterOriginal.includes("1") || filterArray.includes(repeats("1",result.count1))) &&
-          (!filterOriginal.includes("2") || filterArray.includes(repeats("2",result.count2))) &&
-          (!filterOriginal.includes("3") || filterArray.includes(repeats("3",result.count3))) &&
-          (!filterOriginal.includes("4") || filterArray.includes(repeats("4",result.count4))) &&
-          (!filterOriginal.includes("5") || filterArray.includes(repeats("5",result.count5))) &&
-          (!filterOriginal.includes("6") || filterArray.includes(repeats("6",result.count6))) &&
-          (!filterOriginal.includes("7") || filterArray.includes(repeats("7",result.count7))) &&
-          (!filterOriginal.includes("8") || filterArray.includes(repeats("8",result.count8))) &&
-          (!filterOriginal.includes("9") || filterArray.includes(repeats("9",result.count9)))
+          (filterOriginal.indexOf("1")<0 || filterArray.includes(repeats("1",result.count1))) &&
+          (filterOriginal.indexOf("2")<0 || filterArray.includes(repeats("2",result.count2))) &&
+          (filterOriginal.indexOf("3")<0 || filterArray.includes(repeats("3",result.count3))) &&
+          (filterOriginal.indexOf("4")<0 || filterArray.includes(repeats("4",result.count4))) &&
+          (filterOriginal.indexOf("5")<0 || filterArray.includes(repeats("5",result.count5))) &&
+          (filterOriginal.indexOf("6")<0 || filterArray.includes(repeats("6",result.count6))) &&
+          (filterOriginal.indexOf("7")<0 || filterArray.includes(repeats("7",result.count7))) &&
+          (filterOriginal.indexOf("8")<0 || filterArray.includes(repeats("8",result.count8))) &&
+          (filterOriginal.indexOf("9")<0 || filterArray.includes(repeats("9",result.count9)))
         ) {
 			return true;       		
         }
