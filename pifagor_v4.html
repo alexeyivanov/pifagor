@@ -417,7 +417,7 @@ table.MsoTableGrid
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
-  background1;mso-themeshade:191'>Х</span></b><b style='mso-bidi-font-weight:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
   normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
   191'><o:p></o:p></span></b></p>
   </td>
@@ -428,7 +428,7 @@ table.MsoTableGrid
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
-  background1;mso-themeshade:191'>Х</span></b><b style='mso-bidi-font-weight:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
   normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
   191'><o:p></o:p></span></b></p>
   </td>
@@ -471,7 +471,7 @@ table.MsoTableGrid
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
-  background1;mso-themeshade:191'>Х</span></b><b style='mso-bidi-font-weight:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
   normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
   191'><o:p></o:p></span></b></p>
   </td>
@@ -482,7 +482,7 @@ table.MsoTableGrid
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
-  background1;mso-themeshade:191'>Х</span></b><b style='mso-bidi-font-weight:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
   normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
   191'><o:p></o:p></span></b></p>
   </td>
@@ -539,7 +539,7 @@ table.MsoTableGrid
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
-  background1;mso-themeshade:191'>Х</span></b><b style='mso-bidi-font-weight:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
   normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
   191'><o:p></o:p></span></b></p>
   </td>
@@ -594,7 +594,7 @@ table.MsoTableGrid
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
-  background1;mso-themeshade:191'>Х</span></b><b style='mso-bidi-font-weight:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
   normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
   191'><o:p></o:p></span></b></p>
   </td>
@@ -1336,10 +1336,9 @@ function isApplicableForFilter(filter, pifagorResult) {
 	
 	if(filter.names && filter.names.length > 0) {
 	
-		var filterName = document.getElementById("filterName").value;
 		var searchResultForName = false;
 		for(var i = 0; i < filter.names.length; i++) {
-			if(pifagorResult.personName.indexOf(filter.names[i]) > -1) {
+			if(pifagorResult.personName.toLowerCase().indexOf(filter.names[i].toLowerCase()) > -1) {
 				searchResultForName = true;  
 				break;
 			}
