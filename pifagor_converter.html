@@ -28,7 +28,7 @@
   function cleanText(str) {
 	if(str) {
 		//str = str.replace(/[^a-zA-Z0-9]/g, '');
-		str = str.replace(/[`~!@#$%^&*()_|+\-=÷¿?;:'",\n.<>\{\}\[\]\\\/]/gi, '');
+		str = str.replace(/[`~!@#$%^&*()_|+\-=???;:'",\n.<>\{\}\[\]\\\/]/gi, '');
 	}
   	return str;
   }
@@ -52,7 +52,7 @@
   
   function getDataFromTable(table, colHeaderInex, colIndex) {
 	var result = '';
-	var personName = cleanText(table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')[0].innerText);
+	var personName = cleanText(getInnerText(table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')));
 	
 	var spans = table.rows[1].cells[0 + colIndex].getElementsByTagName('span');
 	var bs = table.rows[1].cells[0 + colIndex].getElementsByTagName('b');
@@ -61,9 +61,9 @@
 	logMsg("bs.length:" + bs.length);
 	
 	if(spans && spans.length > 0) {
-		var day = table.rows[1].cells[0 + colIndex].getElementsByTagName('span')[0].innerText;
-		var month = table.rows[1].cells[1 + colIndex].getElementsByTagName('span')[0].innerText;
-		var year = table.rows[1].cells[2 + colIndex].getElementsByTagName('span')[0].innerText;
+		var day = getInnerText(table.rows[1].cells[0 + colIndex].getElementsByTagName('span'));
+		var month = getInnerText(table.rows[1].cells[1 + colIndex].getElementsByTagName('span'));
+		var year = getInnerText(table.rows[1].cells[2 + colIndex].getElementsByTagName('span'));
 		
 		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
 			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
@@ -71,9 +71,9 @@
 			result = item + "\n";
 		}
 	} else if(bs && bs.length > 0) {
-		var day = table.rows[1].cells[0 + colIndex].getElementsByTagName('b')[0].innerText;
-		var month = table.rows[1].cells[1 + colIndex].getElementsByTagName('b')[0].innerText;
-		var year = table.rows[1].cells[2 + colIndex].getElementsByTagName('b')[0].innerText;
+		var day = getInnerText(table.rows[1].cells[0 + colIndex].getElementsByTagName('b'));
+		var month = getInnerText(table.rows[1].cells[1 + colIndex].getElementsByTagName('b'));
+		var year = getInnerText(table.rows[1].cells[2 + colIndex].getElementsByTagName('b'));
 		
 		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
 			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
@@ -85,9 +85,25 @@
 	return result;
   }
   
+  function getInnerText(elements) {
+	var result = '';
+	if(elements && elements.length) {
+		for(var i=0; i<elements.length;i++) {
+			var element = elements[i];
+			if(element && element.innerText) {
+				if(element.className == 'SpellE') {
+					continue;
+				}
+				result = result + element.innerText;
+			}
+		}
+	}
+	return result;
+  }
+  
   function getDataFromTable2(table, colHeaderInex, colIndex) {
 	var result = '';
-	var personName = cleanText(table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')[0].innerText);
+	var personName = cleanText(getInnerText(table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')));
 	
 	var spans = table.rows[0].cells[0 + colIndex].getElementsByTagName('span');
 	var bs = table.rows[0].cells[0 + colIndex].getElementsByTagName('b');
@@ -96,9 +112,9 @@
 	logMsg("bs.length:" + bs.length);
 	
 	if(spans && spans.length > 0) {
-		var day = table.rows[0].cells[1 + colIndex].getElementsByTagName('span')[0].innerText;
-		var month = table.rows[0].cells[2 + colIndex].getElementsByTagName('span')[0].innerText;
-		var year = table.rows[0].cells[3 + colIndex].getElementsByTagName('span')[0].innerText;
+		var day = getInnerText(table.rows[0].cells[1 + colIndex].getElementsByTagName('span'));
+		var month = getInnerText(table.rows[0].cells[2 + colIndex].getElementsByTagName('span'));
+		var year = getInnerText(table.rows[0].cells[3 + colIndex].getElementsByTagName('span'));
 		
 		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
 			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
@@ -106,9 +122,9 @@
 			result = item + "\n";
 		}
 	} else if(bs && bs.length > 0) {
-		var day = table.rows[0].cells[1 + colIndex].getElementsByTagName('b')[0].innerText;
-		var month = table.rows[0].cells[2 + colIndex].getElementsByTagName('b')[0].innerText;
-		var year = table.rows[0].cells[3 + colIndex].getElementsByTagName('b')[0].innerText;
+		var day = getInnerText(table.rows[0].cells[1 + colIndex].getElementsByTagName('b'));
+		var month = getInnerText(table.rows[0].cells[2 + colIndex].getElementsByTagName('b'));
+		var year = getInnerText(table.rows[0].cells[3 + colIndex].getElementsByTagName('b'));
 		
 		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
 			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
@@ -159,28 +175,6 @@
 					
 					result = result + getDataFromTable(table, 0, 0);
 					result = result + getDataFromTable(table, 1, 6);
-					
-					/*
-					var personName1 = table.rows[0].cells[0].getElementsByTagName('span')[0].innerText;
-					var day1 = table.rows[1].cells[0].getElementsByTagName('span')[0].innerText;
-					var month1 = table.rows[1].cells[1].getElementsByTagName('span')[0].innerText;
-					var year1 = table.rows[1].cells[2].getElementsByTagName('span')[0].innerText;
-					if(isNotEmpty(personName1) && isNotEmpty(day1) && isNotEmpty(month1) && isNotEmpty(year1)) {
-						result = result + convert(day1) + "." + convert(month1) + "." + year1 + ";" + personName1 + "\n";
-						logMessages.push(convert(day1) + "." + convert(month1) + "." + year1 + ";" + personName1);
-						document.getElementById("log").value = logMessages.join("\n");
-					}
-					
-					var personName2 = table.rows[0].cells[0+1].getElementsByTagName('span')[0].innerText;
-					var day2 = table.rows[1].cells[0+6].getElementsByTagName('span')[0].innerText;
-					var month2 = table.rows[1].cells[1+6].getElementsByTagName('span')[0].innerText;
-					var year2 = table.rows[1].cells[2+6].getElementsByTagName('span')[0].innerText;
-					if(isNotEmpty(personName2) && isNotEmpty(day2) && isNotEmpty(month2) && isNotEmpty(year2)) {
-						result = result + convert(day2) + "." + convert(month2) + "." + year2 + ";" + personName2 + "\n";
-						logMessages.push(convert(day2) + "." + convert(month2) + "." + year2 + ";" + personName2);
-						document.getElementById("log").value = logMessages.join("\n");
-					}
-					*/
 				
 				} catch(e) {
 					logMessages.push('Ошибка первый уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
