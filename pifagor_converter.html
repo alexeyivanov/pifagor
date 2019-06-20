@@ -22,6 +22,8 @@
 
 <script>
 	
+	var logMessages = [];
+	
   function isNotEmpty(str) {
   	return str && str.trim() != '';
   }
@@ -33,12 +35,52 @@
 	}
   	return str
   }
+  
+  function logMsg(msg) {
+	logMessages.push(msg);
+	document.getElementById("log").value = logMessages.join("\n");
+  }
+  
+  function getDataFromTable(table, colHeaderInex, colIndex) {
+	var result = '';
+	var personName = table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')[0].innerText;
+	
+	var spans = table.rows[1].cells[0 + colIndex].getElementsByTagName('span');
+	var bs = table.rows[1].cells[0 + colIndex].getElementsByTagName('b');
+	
+	logMsg("spans.length:" + spans.length);
+	logMsg("bs.length:" + bs.length);
+	
+	if(spans && spans.length > 0) {
+		var day = table.rows[1].cells[0 + colIndex].getElementsByTagName('span')[0].innerText;
+		var month = table.rows[1].cells[1 + colIndex].getElementsByTagName('span')[0].innerText;
+		var year = table.rows[1].cells[2 + colIndex].getElementsByTagName('span')[0].innerText;
+		
+		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
+			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
+			logMsg(item);
+			result = item + "\n";
+		}
+	} else if(bs && bs.length > 0) {
+		var day = table.rows[1].cells[0 + colIndex].getElementsByTagName('b')[0].innerText;
+		var month = table.rows[1].cells[1 + colIndex].getElementsByTagName('b')[0].innerText;
+		var year = table.rows[1].cells[2 + colIndex].getElementsByTagName('b')[0].innerText;
+		
+		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
+			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
+			logMsg(item);
+			result = item + "\n";
+		}
+	}
+	
+	return result;
+  }
 
   function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 
 	var result = "";
-	var logMessages = [];
+	logMessages = [];
 
     // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
@@ -70,6 +112,11 @@
 				try {
 			  
 					var table = tables[i];
+					
+					result = result + getDataFromTable(table, 0, 0);
+					result = result + getDataFromTable(table, 1, 6);
+					
+					/*
 					var personName1 = table.rows[0].cells[0].getElementsByTagName('span')[0].innerText;
 					var day1 = table.rows[1].cells[0].getElementsByTagName('span')[0].innerText;
 					var month1 = table.rows[1].cells[1].getElementsByTagName('span')[0].innerText;
@@ -89,6 +136,7 @@
 						logMessages.push(convert(day2) + "." + convert(month2) + "." + year2 + ";" + personName2);
 						document.getElementById("log").value = logMessages.join("\n");
 					}
+					*/
 				
 				} catch(e) {
 					logMessages.push('Ошибка первый уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
