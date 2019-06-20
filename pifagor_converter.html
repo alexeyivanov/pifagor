@@ -244,7 +244,7 @@
 					var table = tables[i];
 					
 					result = result + getDataFromTable2(table, 0, 0);
-					result = result + getDataFromTable2(table, 1, 6);
+					//result = result + getDataFromTable2(table, 1, 6);
 				
 				} catch(e) {
 					logMessages.push('Ошибка первый уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
@@ -269,8 +269,18 @@
       reader.readAsText(f,'windows-1251');
     }
   }
+  
+   function handleFileSelectClear(evt) {
+	document.getElementById("files").value = "";
+	document.getElementById("files2").value = "";
+	document.getElementById("result").value = "";
+	document.getElementById("log").value = "";
+   }
+   
 
+  document.getElementById('files').addEventListener('click', handleFileSelectClear, false);
   document.getElementById('files').addEventListener('change', handleFileSelect, false);
+  document.getElementById('files2').addEventListener('click', handleFileSelectClear, false);
   document.getElementById('files2').addEventListener('change', handleFileSelect2, false);
 </script>
 
