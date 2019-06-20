@@ -7,7 +7,8 @@
 <body>
 
 <h2>Конвертер форматов для Квадрата Пифагора</h2>
-<input type="file" id="files" name="files[]" multiple />
+Формат1: <input type="file" id="files" name="files[]" multiple />
+Формат2: <input type="file" id="files2" name="files[]" multiple />
 <output id="list"></output>
 <br/>
 <br/>
@@ -24,6 +25,14 @@
 	
 	var logMessages = [];
 	
+  function cleanText(str) {
+	if(str) {
+		//str = str.replace(/[^a-zA-Z0-9]/g, '');
+		str = str.replace(/[`~!@#$%^&*()_|+\-=÷¿?;:'",\n.<>\{\}\[\]\\\/]/gi, '');
+	}
+  	return str;
+  }
+  
   function isNotEmpty(str) {
   	return str && str.trim() != '';
   }
@@ -43,7 +52,7 @@
   
   function getDataFromTable(table, colHeaderInex, colIndex) {
 	var result = '';
-	var personName = table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')[0].innerText;
+	var personName = cleanText(table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')[0].innerText);
 	
 	var spans = table.rows[1].cells[0 + colIndex].getElementsByTagName('span');
 	var bs = table.rows[1].cells[0 + colIndex].getElementsByTagName('b');
@@ -65,6 +74,41 @@
 		var day = table.rows[1].cells[0 + colIndex].getElementsByTagName('b')[0].innerText;
 		var month = table.rows[1].cells[1 + colIndex].getElementsByTagName('b')[0].innerText;
 		var year = table.rows[1].cells[2 + colIndex].getElementsByTagName('b')[0].innerText;
+		
+		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
+			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
+			logMsg(item);
+			result = item + "\n";
+		}
+	}
+	
+	return result;
+  }
+  
+  function getDataFromTable2(table, colHeaderInex, colIndex) {
+	var result = '';
+	var personName = cleanText(table.rows[0].cells[0 + colHeaderInex].getElementsByTagName('span')[0].innerText);
+	
+	var spans = table.rows[0].cells[0 + colIndex].getElementsByTagName('span');
+	var bs = table.rows[0].cells[0 + colIndex].getElementsByTagName('b');
+	
+	logMsg("spans.length:" + spans.length);
+	logMsg("bs.length:" + bs.length);
+	
+	if(spans && spans.length > 0) {
+		var day = table.rows[0].cells[1 + colIndex].getElementsByTagName('span')[0].innerText;
+		var month = table.rows[0].cells[2 + colIndex].getElementsByTagName('span')[0].innerText;
+		var year = table.rows[0].cells[3 + colIndex].getElementsByTagName('span')[0].innerText;
+		
+		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
+			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
+			logMsg(item);
+			result = item + "\n";
+		}
+	} else if(bs && bs.length > 0) {
+		var day = table.rows[0].cells[1 + colIndex].getElementsByTagName('b')[0].innerText;
+		var month = table.rows[0].cells[2 + colIndex].getElementsByTagName('b')[0].innerText;
+		var year = table.rows[0].cells[3 + colIndex].getElementsByTagName('b')[0].innerText;
 		
 		if(isNotEmpty(personName) && isNotEmpty(day) && isNotEmpty(month) && isNotEmpty(year)) {
 			var item = convert(day) + "." + convert(month) + "." + year + ";" + personName;
@@ -152,6 +196,72 @@
 		  document.getElementById("result").value = result;
 		  document.getElementById("log").value = logMessages.join("\n");
           console.log(result);
+		  
+		  //document.getElementById("files").value = "";
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsText(f,'windows-1251');
+    }
+  }
+  
+  function handleFileSelect2(evt) {
+    var files = evt.target.files; // FileList object
+
+	var result = "";
+	logMessages = [];
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          //console.log(e.target.result);
+          
+		  logMessages.push("Начало конвертации...");
+		  
+          var el = document.createElement( 'html' );
+		  el.innerHTML = e.target.result;
+          
+          //alert(el.getElementsByClassName('MsoTableGrid').length);
+          
+		  try {
+          
+			  var tables = el.getElementsByClassName('MsoTableGrid');
+			  
+			  logMessages.push("tables length:" + tables.length);
+			  document.getElementById("log").value = logMessages.join("\n");
+			  
+			  for(var i = 0; i < tables.length; i++) {
+				
+				try {
+			  
+					var table = tables[i];
+					
+					result = result + getDataFromTable2(table, 0, 0);
+					result = result + getDataFromTable2(table, 1, 6);
+				
+				} catch(e) {
+					logMessages.push('Ошибка первый уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
+					document.getElementById("log").value = logMessages.join("\n");
+				}
+			  }
+		  
+		  } catch(e) {
+			logMessages.push('Ошибка второй уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
+			document.getElementById("log").value = logMessages.join("\n");
+		  }
+		  
+		  document.getElementById("result").value = result;
+		  document.getElementById("log").value = logMessages.join("\n");
+          console.log(result);
+		  
+		  //document.getElementById("files2").value = "";
         };
       })(f);
 
@@ -161,6 +271,7 @@
   }
 
   document.getElementById('files').addEventListener('change', handleFileSelect, false);
+  document.getElementById('files2').addEventListener('change', handleFileSelect2, false);
 </script>
 
 </body>
