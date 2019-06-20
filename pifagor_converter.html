@@ -6,31 +6,39 @@
 </head>
 <body>
 
-<style>
-  .thumb {
-    height: 75px;
-    border: 1px solid #000;
-    margin: 10px 5px 0 0;
-  }
-</style>
 <h2>Конвертер форматов для Квадрата Пифагора</h2>
 <input type="file" id="files" name="files[]" multiple />
 <output id="list"></output>
 <br/>
 <br/>
-<textarea id="myTextarea" style="height:300px;width:100%" placeholder="Результат">
+
+<div style="display: inline-block;width:50%;">
+<textarea id="result" style="height:300px;width:99%;" placeholder="Результат">
 </textarea>
+</div><div style="display: inline-block;width:50%;">
+<textarea id="log" style="height:300px;width:99%;" placeholder="Логи">
+</textarea>
+</div>
 
 <script>
 	
   function isNotEmpty(str) {
   	return str && str.trim() != '';
   }
+  
+  function convert(str) {
+	str = str.trim();
+	if(str.length == 1) {
+		str = "0" + str;
+	}
+  	return str
+  }
 
   function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 
 	var result = "";
+	var logMessages = [];
 
     // Loop through the FileList and render image files as thumbnails.
     for (var i = 0, f; f = files[i]; i++) {
@@ -43,32 +51,58 @@
           // Render thumbnail.
           //console.log(e.target.result);
           
+		  logMessages.push("Начало конвертации...");
+		  
           var el = document.createElement( 'html' );
 		  el.innerHTML = e.target.result;
           
           //alert(el.getElementsByClassName('MsoTableGrid').length);
           
+		  try {
           
-          var tables = el.getElementsByClassName('MsoTableGrid');
-          for(var i = 0; i < tables.length; i++) {
-            var table = tables[i];
-            var personName1 = table.rows[0].cells[0].getElementsByTagName('span')[0].innerText;
-            var day1 = table.rows[1].cells[0].getElementsByTagName('span')[0].innerText;
-            var month1 = table.rows[1].cells[1].getElementsByTagName('span')[0].innerText;
-            var year1 = table.rows[1].cells[2].getElementsByTagName('span')[0].innerText;
-            if(isNotEmpty(personName1) && isNotEmpty(day1) && isNotEmpty(month1) && isNotEmpty(year1)) {
-            	result = result + day1 + "." + month1 + "." + year1 + ";" + personName1 + "\n";
-            }
-            
-            var personName2 = table.rows[0].cells[0+1].getElementsByTagName('span')[0].innerText;
-            var day2 = table.rows[1].cells[0+6].getElementsByTagName('span')[0].innerText;
-            var month2 = table.rows[1].cells[1+6].getElementsByTagName('span')[0].innerText;
-            var year2 = table.rows[1].cells[2+6].getElementsByTagName('span')[0].innerText;
-            if(isNotEmpty(personName2) && isNotEmpty(day2) && isNotEmpty(month2) && isNotEmpty(year2)) {
-            	result = result + day2 + "." + month2 + "." + year2 + ";" + personName2 + "\n";
-            }
-          }
-          document.getElementById("myTextarea").value = result;
+			  var tables = el.getElementsByClassName('MsoTableGrid');
+			  
+			  logMessages.push("tables length:" + tables.length);
+			  document.getElementById("log").value = logMessages.join("\n");
+			  
+			  for(var i = 0; i < tables.length; i++) {
+				
+				try {
+			  
+					var table = tables[i];
+					var personName1 = table.rows[0].cells[0].getElementsByTagName('span')[0].innerText;
+					var day1 = table.rows[1].cells[0].getElementsByTagName('span')[0].innerText;
+					var month1 = table.rows[1].cells[1].getElementsByTagName('span')[0].innerText;
+					var year1 = table.rows[1].cells[2].getElementsByTagName('span')[0].innerText;
+					if(isNotEmpty(personName1) && isNotEmpty(day1) && isNotEmpty(month1) && isNotEmpty(year1)) {
+						result = result + convert(day1) + "." + convert(month1) + "." + year1 + ";" + personName1 + "\n";
+						logMessages.push(convert(day1) + "." + convert(month1) + "." + year1 + ";" + personName1);
+						document.getElementById("log").value = logMessages.join("\n");
+					}
+					
+					var personName2 = table.rows[0].cells[0+1].getElementsByTagName('span')[0].innerText;
+					var day2 = table.rows[1].cells[0+6].getElementsByTagName('span')[0].innerText;
+					var month2 = table.rows[1].cells[1+6].getElementsByTagName('span')[0].innerText;
+					var year2 = table.rows[1].cells[2+6].getElementsByTagName('span')[0].innerText;
+					if(isNotEmpty(personName2) && isNotEmpty(day2) && isNotEmpty(month2) && isNotEmpty(year2)) {
+						result = result + convert(day2) + "." + convert(month2) + "." + year2 + ";" + personName2 + "\n";
+						logMessages.push(convert(day2) + "." + convert(month2) + "." + year2 + ";" + personName2);
+						document.getElementById("log").value = logMessages.join("\n");
+					}
+				
+				} catch(e) {
+					logMessages.push('Ошибка первый уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
+					document.getElementById("log").value = logMessages.join("\n");
+				}
+			  }
+		  
+		  } catch(e) {
+			logMessages.push('Ошибка второй уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
+			document.getElementById("log").value = logMessages.join("\n");
+		  }
+		  
+		  document.getElementById("result").value = result;
+		  document.getElementById("log").value = logMessages.join("\n");
           console.log(result);
         };
       })(f);
