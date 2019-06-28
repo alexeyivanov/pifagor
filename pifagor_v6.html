@@ -1244,7 +1244,7 @@ function calcPifagor(dataBirthday, personName) {
     } else if(yearInt >= 1700 && yearInt < 1900) {
     	G = +29;
     } else {
-    	result.errors.push("Данный год не расчитать. Доступный год с 1700 и позже");
+    	result.errors.push(dataBirthday + " Данный год не расчитать. Доступный год с 1700 и позже");
 		return result;
     }
     
