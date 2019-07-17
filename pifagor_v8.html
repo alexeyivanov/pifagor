@@ -1,0 +1,1941 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta charset="utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+
+<!--<script src="https://github.com/niklasvh/html2canvas/releases/download/0.4.1/html2canvas.js"></script>-->
+<script>
+!function(j,q,X){"use strict";var o,e,i,l,c,_={};function s(t,e,n){var r,a=t.runtimeStyle&&t.runtimeStyle[e],o=t.style;return!/^-?[0-9]+\.?[0-9]*(?:px)?$/i.test(n)&&/^-?\d/.test(n)&&(r=o.left,a&&(t.runtimeStyle.left=t.currentStyle.left),o.left="fontSize"===e?"1em":n||0,n=o.pixelLeft+"px",o.left=r,a&&(t.runtimeStyle.left=a)),/^(thin|medium|thick)$/i.test(n)?n:Math.round(parseFloat(n))+"px"}function d(t){return parseInt(t,10)}function h(t,e,n,r,a,o){var i,l,s,c,d=_.Util.getCSS(e,t,a);if(1===d.length&&(c=d[0],(d=[])[0]=c,d[1]=c),-1!==d[0].toString().indexOf("%"))s=parseFloat(d[0])/100,l=n.width*s,"backgroundSize"!==t&&(l-=(o||r).width*s);else if("backgroundSize"===t)if("auto"===d[0])l=r.width;else if(/contain|cover/.test(d[0])){var h=_.Util.resizeBounds(r.width,r.height,n.width,n.height,d[0]);l=h.width,i=h.height}else l=parseInt(d[0],10);else l=parseInt(d[0],10);return"auto"===d[1]?i=l/r.width*r.height:-1!==d[1].toString().indexOf("%")?(s=parseFloat(d[1])/100,i=n.height*s,"backgroundSize"!==t&&(i-=(o||r).height*s)):i=parseInt(d[1],10),[l,i]}_.Util={},_.Util.log=function(t){_.logging&&j.console&&j.console.log&&j.console.log(t)},_.Util.trimText=(e=String.prototype.trim,function(t){return e?e.apply(t):((t||"")+"").replace(/^\s+|\s+$/g,"")}),_.Util.asFloat=function(t){return parseFloat(t)},i=/((rgba|rgb)\([^\)]+\)(\s-?\d+px){0,})/g,l=/(-?\d+px)|(#.+)|(rgb\(.+\))|(rgba\(.+\))/g,_.Util.parseTextShadows=function(t){if(!t||"none"===t)return[];for(var e=t.match(i),n=[],r=0;e&&r<e.length;r++){var a=e[r].match(l);n.push({color:a[0],offsetX:a[1]?a[1].replace("px",""):0,offsetY:a[2]?a[2].replace("px",""):0,blur:a[3]?a[3].replace("px",""):0})}return n},_.Util.parseBackgroundImage=function(t){function e(){n&&('"'===r.substr(0,1)&&(r=r.substr(1,r.length-2)),r&&c.push(r),"-"===n.substr(0,1)&&0<(o=n.indexOf("-",1)+1)&&(a=n.substr(0,o),n=n.substr(o)),d.push({prefix:a,method:n.toLowerCase(),value:i,args:c})),c=[],n=a=r=i=""}var n,r,a,o,i,l,s,c,d=[],h=0,u=0;e();for(var f=0,p=t.length;f<p;f++)if(l=t[f],!(0===h&&-1<" \r\n\t".indexOf(l))){switch(l){case'"':s?s===l&&(s=null):s=l;break;case"(":if(s)break;if(0===h){h=1,i+=l;continue}u++;break;case")":if(s)break;if(1===h){if(0===u){h=0,i+=l,e();continue}u--}break;case",":if(s)break;if(0===h){e();continue}if(1!==h||0!==u||n.match(/^url$/i))break;c.push(r),r="",i+=l;continue}i+=l,0===h?n+=l:r+=l}return e(),d},_.Util.Bounds=function(t){var e,n={};return t.getBoundingClientRect&&(e=t.getBoundingClientRect(),n.top=e.top,n.bottom=e.bottom||e.top+e.height,n.left=e.left,n.width=t.offsetWidth,n.height=t.offsetHeight),n},_.Util.OffsetBounds=function(t){var e=t.offsetParent?_.Util.OffsetBounds(t.offsetParent):{top:0,left:0};return{top:t.offsetTop+e.top,bottom:t.offsetTop+t.offsetHeight+e.top,left:t.offsetLeft+e.left,width:t.offsetWidth,height:t.offsetHeight}},_.Util.getCSS=function(t,e,n){void 0!==t&&(o=q.defaultView.getComputedStyle(t,null));var r=o[e];if(/^background(Size|Position)$/.test(e))return function(t,e,n,r){if(t=(t=(t||"").split(","))[r||0]||t[0]||"auto",t=_.Util.trimText(t).split(" "),"backgroundSize"!==n||t[0]&&!t[0].match(/cover|contain|auto/)){if(t[0]=-1===t[0].indexOf("%")?s(e,n+"X",t[0]):t[0],t[1]===X){if("backgroundSize"===n)return t[1]="auto",t;t[1]=t[0]}t[1]=-1===t[1].indexOf("%")?s(e,n+"Y",t[1]):t[1]}else;return t}(r,t,e,n);if(/border(Top|Bottom)(Left|Right)Radius/.test(e)){var a=r.split(" ");return a.length<=1&&(a[1]=a[0]),a.map(d)}return r},_.Util.resizeBounds=function(t,e,n,r,a){var o,i,l=t/e;return a&&"auto"!==a?n/r<l^"contain"===a?o=(i=r)*l:i=(o=n)/l:(o=n,i=r),{width:o,height:i}},_.Util.BackgroundPosition=function(t,e,n,r,a){var o=h("backgroundPosition",t,e,n,r,a);return{left:o[0],top:o[1]}},_.Util.BackgroundSize=function(t,e,n,r){var a=h("backgroundSize",t,e,n,r);return{width:a[0],height:a[1]}},_.Util.Extend=function(t,e){for(var n in t)t.hasOwnProperty(n)&&(e[n]=t[n]);return e},_.Util.Children=function(t){var e,n,r;try{e=t.nodeName&&"IFRAME"===t.nodeName.toUpperCase()?t.contentDocument||t.contentWindow.document:(n=t.childNodes,r=[],null!==n&&function(t,e){var n=t.length,r=0;if("number"==typeof e.length)for(var a=e.length;r<a;r++)t[n++]=e[r];else for(;e[r]!==X;)t[n++]=e[r++];t.length=n}(r,n),r)}catch(t){_.Util.log("html2canvas.Util.Children failed with exception: "+t.message),e=[]}return e},_.Util.isTransparent=function(t){return"transparent"===t||"rgba(0, 0, 0, 0)"===t},_.Util.Font=(c={},function(t,e,n){if(c[t+"-"+e]!==X)return c[t+"-"+e];var r,a,o=n.createElement("div"),i=n.createElement("img"),l=n.createElement("span"),s="Hidden Text";return o.style.visibility="hidden",o.style.fontFamily=t,o.style.fontSize=e,o.style.margin=0,o.style.padding=0,n.body.appendChild(o),i.src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACwAAAAAAQABAAACAkQBADs=",i.width=1,i.height=1,i.style.margin=0,i.style.padding=0,i.style.verticalAlign="baseline",l.style.fontFamily=t,l.style.fontSize=e,l.style.margin=0,l.style.padding=0,l.appendChild(n.createTextNode(s)),o.appendChild(l),o.appendChild(i),r=i.offsetTop-l.offsetTop+1,o.removeChild(l),o.appendChild(n.createTextNode(s)),o.style.lineHeight="normal",i.style.verticalAlign="super",a={baseline:r,lineWidth:1,middle:i.offsetTop-o.offsetTop+1},c[t+"-"+e]=a,n.body.removeChild(o),a}),function(){var n=_.Util,t={};_.Generate=t;var g=[/^(-webkit-linear-gradient)\(([a-z\s]+)([\w\d\.\s,%\(\)]+)\)$/,/^(-o-linear-gradient)\(([a-z\s]+)([\w\d\.\s,%\(\)]+)\)$/,/^(-webkit-gradient)\((linear|radial),\s((?:\d{1,3}%?)\s(?:\d{1,3}%?),\s(?:\d{1,3}%?)\s(?:\d{1,3}%?))([\w\d\.\s,%\(\)\-]+)\)$/,/^(-moz-linear-gradient)\(((?:\d{1,3}%?)\s(?:\d{1,3}%?))([\w\d\.\s,%\(\)]+)\)$/,/^(-webkit-radial-gradient)\(((?:\d{1,3}%?)\s(?:\d{1,3}%?)),\s(\w+)\s([a-z\-]+)([\w\d\.\s,%\(\)]+)\)$/,/^(-moz-radial-gradient)\(((?:\d{1,3}%?)\s(?:\d{1,3}%?)),\s(\w+)\s?([a-z\-]*)([\w\d\.\s,%\(\)]+)\)$/,/^(-o-radial-gradient)\(((?:\d{1,3}%?)\s(?:\d{1,3}%?)),\s(\w+)\s([a-z\-]+)([\w\d\.\s,%\(\)]+)\)$/];function d(t){return function(e){try{t.addColorStop(e.stop,e.color)}catch(t){n.log(["failed to add color stop: ",t,"; tried to add: ",e])}}}t.parseGradient=function(t,e){var n,r,a,o,i,l,s,c,d,h,u,f,p=g.length;for(r=0;r<p&&!(a=t.match(g[r]));r+=1);if(a)switch(a[1]){case"-webkit-linear-gradient":case"-o-linear-gradient":if(n={type:"linear",x0:null,y0:null,x1:null,y1:null,colorStops:[]},i=a[2].match(/\w+/g))for(l=i.length,r=0;r<l;r+=1)switch(i[r]){case"top":n.y0=0,n.y1=e.height;break;case"right":n.x0=e.width,n.x1=0;break;case"bottom":n.y0=e.height,n.y1=0;break;case"left":n.x0=0,n.x1=e.width}if(null===n.x0&&null===n.x1&&(n.x0=n.x1=e.width/2),null===n.y0&&null===n.y1&&(n.y0=n.y1=e.height/2),i=a[3].match(/((?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\)(?:\s\d{1,3}(?:%|px))?)+/g))for(l=i.length,s=1/Math.max(l-1,1),r=0;r<l;r+=1)(c=i[r].match(/((?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\))\s*(\d{1,3})?(%|px)?/))[2]?(o=parseFloat(c[2]),"%"===c[3]?o/=100:o/=e.width):o=r*s,n.colorStops.push({color:c[1],stop:o});break;case"-webkit-gradient":if(n={type:"radial"===a[2]?"circle":a[2],x0:0,y0:0,x1:0,y1:0,colorStops:[]},(i=a[3].match(/(\d{1,3})%?\s(\d{1,3})%?,\s(\d{1,3})%?\s(\d{1,3})%?/))&&(n.x0=i[1]*e.width/100,n.y0=i[2]*e.height/100,n.x1=i[3]*e.width/100,n.y1=i[4]*e.height/100),i=a[4].match(/((?:from|to|color-stop)\((?:[0-9\.]+,\s)?(?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\)\))+/g))for(l=i.length,r=0;r<l;r+=1)c=i[r].match(/(from|to|color-stop)\(([0-9\.]+)?(?:,\s)?((?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\))\)/),o=parseFloat(c[2]),"from"===c[1]&&(o=0),"to"===c[1]&&(o=1),n.colorStops.push({color:c[3],stop:o});break;case"-moz-linear-gradient":if(n={type:"linear",x0:0,y0:0,x1:0,y1:0,colorStops:[]},(i=a[2].match(/(\d{1,3})%?\s(\d{1,3})%?/))&&(n.x0=i[1]*e.width/100,n.y0=i[2]*e.height/100,n.x1=e.width-n.x0,n.y1=e.height-n.y0),i=a[3].match(/((?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\)(?:\s\d{1,3}%)?)+/g))for(l=i.length,s=1/Math.max(l-1,1),r=0;r<l;r+=1)(c=i[r].match(/((?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\))\s*(\d{1,3})?(%)?/))[2]?(o=parseFloat(c[2]),c[3]&&(o/=100)):o=r*s,n.colorStops.push({color:c[1],stop:o});break;case"-webkit-radial-gradient":case"-moz-radial-gradient":case"-o-radial-gradient":if(n={type:"circle",x0:0,y0:0,x1:e.width,y1:e.height,cx:0,cy:0,rx:0,ry:0,colorStops:[]},(i=a[2].match(/(\d{1,3})%?\s(\d{1,3})%?/))&&(n.cx=i[1]*e.width/100,n.cy=i[2]*e.height/100),i=a[3].match(/\w+/),c=a[4].match(/[a-z\-]*/),i&&c)switch(c[0]){case"farthest-corner":case"cover":case"":d=Math.sqrt(Math.pow(n.cx,2)+Math.pow(n.cy,2)),h=Math.sqrt(Math.pow(n.cx,2)+Math.pow(n.y1-n.cy,2)),u=Math.sqrt(Math.pow(n.x1-n.cx,2)+Math.pow(n.y1-n.cy,2)),f=Math.sqrt(Math.pow(n.x1-n.cx,2)+Math.pow(n.cy,2)),n.rx=n.ry=Math.max(d,h,u,f);break;case"closest-corner":d=Math.sqrt(Math.pow(n.cx,2)+Math.pow(n.cy,2)),h=Math.sqrt(Math.pow(n.cx,2)+Math.pow(n.y1-n.cy,2)),u=Math.sqrt(Math.pow(n.x1-n.cx,2)+Math.pow(n.y1-n.cy,2)),f=Math.sqrt(Math.pow(n.x1-n.cx,2)+Math.pow(n.cy,2)),n.rx=n.ry=Math.min(d,h,u,f);break;case"farthest-side":"circle"===i[0]?n.rx=n.ry=Math.max(n.cx,n.cy,n.x1-n.cx,n.y1-n.cy):(n.type=i[0],n.rx=Math.max(n.cx,n.x1-n.cx),n.ry=Math.max(n.cy,n.y1-n.cy));break;case"closest-side":case"contain":"circle"===i[0]?n.rx=n.ry=Math.min(n.cx,n.cy,n.x1-n.cx,n.y1-n.cy):(n.type=i[0],n.rx=Math.min(n.cx,n.x1-n.cx),n.ry=Math.min(n.cy,n.y1-n.cy))}if(i=a[5].match(/((?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\)(?:\s\d{1,3}(?:%|px))?)+/g))for(l=i.length,s=1/Math.max(l-1,1),r=0;r<l;r+=1)(c=i[r].match(/((?:rgb|rgba)\(\d{1,3},\s\d{1,3},\s\d{1,3}(?:,\s[0-9\.]+)?\))\s*(\d{1,3})?(%|px)?/))[2]?(o=parseFloat(c[2]),"%"===c[3]?o/=100:o/=e.width):o=r*s,n.colorStops.push({color:c[1],stop:o})}return n},t.Gradient=function(t,e){if(0!==e.width&&0!==e.height){var n,r,a=q.createElement("canvas"),o=a.getContext("2d");if(a.width=e.width,a.height=e.height,n=_.Generate.parseGradient(t,e))switch(n.type){case"linear":r=o.createLinearGradient(n.x0,n.y0,n.x1,n.y1),n.colorStops.forEach(d(r)),o.fillStyle=r,o.fillRect(0,0,e.width,e.height);break;case"circle":r=o.createRadialGradient(n.cx,n.cy,0,n.cx,n.cy,n.rx),n.colorStops.forEach(d(r)),o.fillStyle=r,o.fillRect(0,0,e.width,e.height);break;case"ellipse":var i=q.createElement("canvas"),l=i.getContext("2d"),s=Math.max(n.rx,n.ry),c=2*s;i.width=i.height=c,r=l.createRadialGradient(n.rx,n.ry,0,n.rx,n.ry,s),n.colorStops.forEach(d(r)),l.fillStyle=r,l.fillRect(0,0,c,c),o.fillStyle=n.colorStops[n.colorStops.length-1].color,o.fillRect(0,0,a.width,a.height),o.drawImage(i,n.cx-n.rx,n.cy-n.ry,2*n.rx,2*n.ry)}return a}},t.ListAlpha=function(t){for(var e,n="";e=t%26,n=String.fromCharCode(64+e)+n,26<26*(t/=26););return n},t.ListRoman=function(t){var e,n=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"],r=[1e3,900,500,400,100,90,50,40,10,9,5,4,1],a="",o=n.length;if(t<=0||4e3<=t)return t;for(e=0;e<o;e+=1)for(;r[e]<=t;)t-=r[e],a+=n[e];return a}}(),_.Parse=function(n,d){j.scroll(0,0);var t=d.elements===X?q.body:d.elements[0],s=t.ownerDocument,f=_.Util,l=f.Support(d,s),p=new RegExp("("+d.ignoreElements+")"),i=s.body,m=f.getCSS,g="___html2canvas___pseudoelement",e=s.createElement("style");function c(t,e){var n=parseInt(m(t,e),10);return isNaN(n)?0:n}function y(t,e,n,r,a,o){"transparent"!==o&&(t.setVariable("fillStyle",o),t.fillRect(e,n,r,a),1)}function h(t,e,n){if(0<t.length)return e+n.toUpperCase()}function u(t,e,n,r){null!==t&&0<f.trimText(t).length&&(r.fillText(t,e,n),1)}function b(t,e,n,r){var a=m(e,"fontWeight"),o=m(e,"fontFamily"),i=m(e,"fontSize"),l=f.parseTextShadows(m(e,"textShadow"));switch(parseInt(a,10)){case 401:a="bold";break;case 400:a="normal"}if(t.setVariable("fillStyle",r),t.setVariable("font",[m(e,"fontStyle"),m(e,"fontVariant"),a,i,o].join(" ")),t.setVariable("textAlign","left"),l.length&&(t.setVariable("shadowColor",l[0].color),t.setVariable("shadowOffsetX",l[0].offsetX),t.setVariable("shadowOffsetY",l[0].offsetY),t.setVariable("shadowBlur",l[0].blur)),"none"!==n)return f.Font(o,i,s)}function w(t,e,n,r,a){var o;if(l.rangeBounds&&!a)"none"===n&&0===f.trimText(e).length||(o=function(t,e,n){var r=s.createRange();return r.setStart(e,n),r.setEnd(e,n+t.length),r.getBoundingClientRect()}(e,t.node,t.textOffset)),t.textOffset+=e.length;else if(t.node&&"string"==typeof t.node.nodeValue){var i=r?t.node.splitText(e.length):null;o=function(t,e){var n=t.parentNode,r=s.createElement("wrapper"),a=t.cloneNode(!0);r.appendChild(t.cloneNode(!0)),n.replaceChild(r,t);var o=e?f.OffsetBounds(r):f.Bounds(r);return n.replaceChild(a,r),o}(t.node,a),t.node=i}return o}function x(t,e,r){var a,o,i=r.ctx,l=m(t,"color"),s=m(t,"textDecoration"),n=m(t,"textAlign"),c={node:e,textOffset:0};0<f.trimText(e.nodeValue).length&&(e.nodeValue=function(t,e){switch(e){case"lowercase":return t.toLowerCase();case"capitalize":return t.replace(/(^|\s|:|-|\(|\))([a-z])/g,h);case"uppercase":return t.toUpperCase();default:return t}}(e.nodeValue,m(t,"textTransform")),n=n.replace(["-webkit-auto"],["auto"]),o=!d.letterRendering&&/^(left|right|justify|auto)$/.test(n)&&function(t){return/^(normal|none|0px)$/.test(t)}(m(t,"letterSpacing"))?e.nodeValue.split(/(\b| )/):e.nodeValue.split(""),a=b(i,t,s,l),d.chinese&&o.forEach(function(t,e){/.*[\u4E00-\u9FA5].*$/.test(t)&&((t=t.split("")).unshift(e,1),o.splice.apply(o,t))}),o.forEach(function(t,e){var n=w(c,t,s,e<o.length-1,r.transform.matrix);n&&(u(t,n.left,n.bottom,i),function(t,e,n,r,a){switch(e){case"underline":y(t,n.left,Math.round(n.top+r.baseline+r.lineWidth),n.width,1,a);break;case"overline":y(t,n.left,Math.round(n.top),n.width,1,a);break;case"line-through":y(t,n.left,Math.ceil(n.top+r.middle+r.lineWidth),n.width,1,a)}}(i,s,n,a,l))}))}function v(t,e,n){var r,a,o=e.ctx,i=m(t,"listStyleType");if(/^(decimal|decimal-leading-zero|upper-alpha|upper-latin|upper-roman|lower-alpha|lower-greek|lower-latin|lower-roman)$/i.test(i)){if(a=function(t,e){var n,r,a=s.createElement("boundelement");return a.style.display="inline",n=t.style.listStyleType,t.style.listStyleType="none",a.appendChild(s.createTextNode(e)),t.insertBefore(a,t.firstChild),r=f.Bounds(a),t.removeChild(a),t.style.listStyleType=n,r}(t,r=function(t,e){var n,r=function(t){var e=-1,n=1,r=t.parentNode.childNodes;if(t.parentNode){for(;r[++e]!==t;)1===r[e].nodeType&&n++;return n}return-1}(t);switch(e){case"decimal":n=r;break;case"decimal-leading-zero":n=1===r.toString().length?r="0"+r.toString():r.toString();break;case"upper-roman":n=_.Generate.ListRoman(r);break;case"lower-roman":n=_.Generate.ListRoman(r).toLowerCase();break;case"lower-alpha":n=_.Generate.ListAlpha(r).toLowerCase();break;case"upper-alpha":n=_.Generate.ListAlpha(r)}return n+". "}(t,i)),b(o,t,"none",m(t,"color")),"inside"!==m(t,"listStylePosition"))return;o.setVariable("textAlign","left"),u(r,n.left,a.bottom,o)}}function k(t){var e=n[t];return!(!e||!0!==e.succeeded)&&e.img}function C(t,e){var n=Math.max(t.left,e.left),r=Math.max(t.top,e.top);return{left:n,top:r,width:Math.min(t.left+t.width,e.left+e.width)-n,height:Math.min(t.top+t.height,e.top+e.height)-r}}function T(t,e,n,r,a){var o=c(e,"paddingLeft"),i=c(e,"paddingTop"),l=c(e,"paddingRight"),s=c(e,"paddingBottom");A(t,n,0,0,n.width,n.height,r.left+o+a[3].width,r.top+i+a[0].width,r.width-(a[1].width+a[3].width+o+l),r.height-(a[0].width+a[2].width+i+s))}e.innerHTML="."+g+'-before:before { content: "" !important; display: none !important; }.'+g+'-after:after { content: "" !important; display: none !important; }',i.appendChild(e),n=n||{};var S,M=(S=(Math.sqrt(2)-1)/3*4,function(t,e,n,r){var a=n*S,o=r*S,i=t+n,l=e+r;return{topLeft:R({x:t,y:l},{x:t,y:l-o},{x:i-a,y:e},{x:i,y:e}),topRight:R({x:t,y:e},{x:t+a,y:e},{x:i,y:l-o},{x:i,y:l}),bottomRight:R({x:i,y:e},{x:i,y:e+o},{x:t+a,y:l},{x:t,y:l}),bottomLeft:R({x:i,y:l},{x:i-a,y:l},{x:t,y:e+o},{x:t,y:e})}});function R(l,s,c,d){function h(t,e,n){return{x:t.x+(e.x-t.x)*n,y:t.y+(e.y-t.y)*n}}return{start:l,startControl:s,endControl:c,end:d,subdivide:function(t){var e=h(l,s,t),n=h(s,c,t),r=h(c,d,t),a=h(e,n,t),o=h(n,r,t),i=h(a,o,t);return[R(l,e,a,i),R(i,o,r,d)]},curveTo:function(t){t.push(["bezierCurve",s.x,s.y,c.x,c.y,d.x,d.y])},curveToReversed:function(t){t.push(["bezierCurve",c.x,c.y,s.x,s.y,l.x,l.y])}}}function E(t,e,n,r,a,o,i){0<e[0]||0<e[1]?(t.push(["line",r[0].start.x,r[0].start.y]),r[0].curveTo(t),r[1].curveTo(t)):t.push(["line",o,i]),(0<n[0]||0<n[1])&&t.push(["line",a[0].start.x,a[0].start.y])}function I(t,e,n,r,a,o,i){var l=[];return 0<e[0]||0<e[1]?(l.push(["line",r[1].start.x,r[1].start.y]),r[1].curveTo(l)):l.push(["line",t.c1[0],t.c1[1]]),0<n[0]||0<n[1]?(l.push(["line",o[0].start.x,o[0].start.y]),o[0].curveTo(l),l.push(["line",i[0].end.x,i[0].end.y]),i[0].curveToReversed(l)):(l.push(["line",t.c2[0],t.c2[1]]),l.push(["line",t.c3[0],t.c3[1]])),0<e[0]||0<e[1]?(l.push(["line",a[1].end.x,a[1].end.y]),a[1].curveToReversed(l)):l.push(["line",t.c4[0],t.c4[1]]),l}function L(t,e,n){var r,a,o,i,l,s,c=e.left,d=e.top,h=e.width,u=e.height,f=function(e){return["TopLeft","TopRight","BottomRight","BottomLeft"].map(function(t){return m(e,"border"+t+"Radius")})}(t),p=function(t,e,n){var r=t.left,a=t.top,o=t.width,i=t.height,l=e[0][0],s=e[0][1],c=e[1][0],d=e[1][1],h=e[2][0],u=e[2][1],f=e[3][0],p=e[3][1],g=o-c,m=i-u,y=o-h,b=i-p;return{topLeftOuter:M(r,a,l,s).topLeft.subdivide(.5),topLeftInner:M(r+n[3].width,a+n[0].width,Math.max(0,l-n[3].width),Math.max(0,s-n[0].width)).topLeft.subdivide(.5),topRightOuter:M(r+g,a,c,d).topRight.subdivide(.5),topRightInner:M(r+Math.min(g,o+n[3].width),a+n[0].width,g>o+n[3].width?0:c-n[3].width,d-n[0].width).topRight.subdivide(.5),bottomRightOuter:M(r+y,a+m,h,u).bottomRight.subdivide(.5),bottomRightInner:M(r+Math.min(y,o+n[3].width),a+Math.min(m,i+n[0].width),Math.max(0,h-n[1].width),Math.max(0,u-n[2].width)).bottomRight.subdivide(.5),bottomLeftOuter:M(r,a+b,f,p).bottomLeft.subdivide(.5),bottomLeftInner:M(r+n[3].width,a+b,Math.max(0,f-n[3].width),Math.max(0,p-n[2].width)).bottomLeft.subdivide(.5)}}(e,f,n),g={clip:function(t,e,n,r,a){var o=[];switch(m(t,"backgroundClip")){case"content-box":case"padding-box":E(o,r[0],r[1],e.topLeftInner,e.topRightInner,a.left+n[3].width,a.top+n[0].width),E(o,r[1],r[2],e.topRightInner,e.bottomRightInner,a.left+a.width-n[1].width,a.top+n[0].width),E(o,r[2],r[3],e.bottomRightInner,e.bottomLeftInner,a.left+a.width-n[1].width,a.top+a.height-n[2].width),E(o,r[3],r[0],e.bottomLeftInner,e.topLeftInner,a.left+n[3].width,a.top+a.height-n[2].width);break;default:E(o,r[0],r[1],e.topLeftOuter,e.topRightOuter,a.left,a.top),E(o,r[1],r[2],e.topRightOuter,e.bottomRightOuter,a.left+a.width,a.top),E(o,r[2],r[3],e.bottomRightOuter,e.bottomLeftOuter,a.left+a.width,a.top+a.height),E(o,r[3],r[0],e.bottomLeftOuter,e.topLeftOuter,a.left,a.top+a.height)}return o}(t,p,n,f,e),borders:[]};for(r=0;r<4;r++)if(0<n[r].width){switch(a=c,o=d,i=h,l=u-n[2].width,r){case 0:l=n[0].width,s=I({c1:[a,o],c2:[a+i,o],c3:[a+i-n[1].width,o+l],c4:[a+n[3].width,o+l]},f[0],f[1],p.topLeftOuter,p.topLeftInner,p.topRightOuter,p.topRightInner);break;case 1:s=I({c1:[(a=c+h-n[1].width)+(i=n[1].width),o],c2:[a+i,o+l+n[2].width],c3:[a,o+l],c4:[a,o+n[0].width]},f[1],f[2],p.topRightOuter,p.topRightInner,p.bottomRightOuter,p.bottomRightInner);break;case 2:s=I({c1:[a+i,(o=o+u-n[2].width)+(l=n[2].width)],c2:[a,o+l],c3:[a+n[3].width,o],c4:[a+i-n[3].width,o]},f[2],f[3],p.bottomRightOuter,p.bottomRightInner,p.bottomLeftOuter,p.bottomLeftInner);break;case 3:i=n[3].width,s=I({c1:[a,o+l+n[2].width],c2:[a,o],c3:[a+i,o+n[0].width],c4:[a+i,o+l]},f[3],f[0],p.bottomLeftOuter,p.bottomLeftInner,p.topLeftOuter,p.topLeftInner)}g.borders.push({args:s,color:n[r].color})}return g}function O(t,e){var n=t.drawShape();return e.forEach(function(t,e){n[0===e?"moveTo":t[0]+"To"].apply(null,t.slice(1))}),n}function z(e,t,n){var r,a,o=s.createElement("valuewrap");["lineHeight","textAlign","fontFamily","color","fontSize","paddingLeft","paddingTop","width","height","border","borderLeftWidth","borderTopWidth"].forEach(function(t){try{o.style[t]=m(e,t)}catch(t){f.log("html2canvas: Parse: Exception caught in renderFormValue: "+t.message)}}),o.style.borderColor="black",o.style.borderStyle="solid",o.style.display="block",o.style.position="absolute",!/^(submit|reset|button|text|password)$/.test(e.type)&&"SELECT"!==e.nodeName||(o.style.lineHeight=m(e,"height")),o.style.top=t.top+"px",o.style.left=t.left+"px",(r="SELECT"===e.nodeName?(e.options[e.selectedIndex]||0).text:e.value)||(r=e.placeholder),a=s.createTextNode(r),o.appendChild(a),i.appendChild(o),x(e,a,n),i.removeChild(o)}function A(t){t.drawImage.apply(t,Array.prototype.slice.call(arguments,1)),1}function B(t,e){var n=j.getComputedStyle(t,e);if(n&&n.content&&"none"!==n.content&&"-moz-alt-content"!==n.content&&"none"!==n.display){var r=n.content+"",a=r.substr(0,1);a===r.substr(r.length-1)&&a.match(/'|"/)&&(r=r.substr(1,r.length-2));var o="url"===r.substr(0,3),i=q.createElement(o?"img":"span");return i.className=g+"-before "+g+"-after",Object.keys(n).filter(U).forEach(function(e){try{i.style[e]=n[e]}catch(t){f.log(["Tried to assign readonly property ",e,"Error:",t])}}),o?i.src=f.parseBackgroundImage(r)[0].args[0]:i.innerHTML=r,i}}function U(t){return isNaN(j.parseInt(t,10))}function N(t,e,n,r){var a=Math.round(r.left+n.left),o=Math.round(r.top+n.top);t.createPattern(e),t.translate(a,o),t.fill(),t.translate(-a,-o)}function P(t,e,n,r,a,o,i,l){var s=[];s.push(["line",Math.round(a),Math.round(o)]),s.push(["line",Math.round(a+i),Math.round(o)]),s.push(["line",Math.round(a+i),Math.round(l+o)]),s.push(["line",Math.round(a),Math.round(l+o)]),O(t,s),t.save(),t.clip(),N(t,e,n,r),t.restore()}function F(t,e,n,r,a){var o=f.BackgroundSize(t,e,r,a),i=f.BackgroundPosition(t,e,r,a,o),l=m(t,"backgroundRepeat").split(",").map(f.trimText);switch(r=function(t,e){if(t.width===e.width&&t.height===e.height)return t;var n=s.createElement("canvas");return n.width=e.width,n.height=e.height,A(n.getContext("2d"),t,0,0,t.width,t.height,0,0,e.width,e.height),n}(r,o),l=l[a]||l[0]){case"repeat-x":P(n,r,i,e,e.left,e.top+i.top,99999,r.height);break;case"repeat-y":P(n,r,i,e,e.left+i.left,e.top,r.width,99999);break;case"no-repeat":P(n,r,i,e,e.left+i.left,e.top+i.top,r.width,r.height);break;default:N(n,r,i,{top:e.top,left:e.left,width:r.width,height:r.height})}}function V(t){return t.replace("px","")}var r,a,o,D=/(matrix)\((.+)\)/;function $(t,e,n,r){var a=function(t,e){var n=[];return{storage:n,width:t,height:e,clip:function(){n.push({type:"function",name:"clip",arguments:arguments})},translate:function(){n.push({type:"function",name:"translate",arguments:arguments})},fill:function(){n.push({type:"function",name:"fill",arguments:arguments})},save:function(){n.push({type:"function",name:"save",arguments:arguments})},restore:function(){n.push({type:"function",name:"restore",arguments:arguments})},fillRect:function(){n.push({type:"function",name:"fillRect",arguments:arguments})},createPattern:function(){n.push({type:"function",name:"createPattern",arguments:arguments})},drawShape:function(){var t=[];return n.push({type:"function",name:"drawShape",arguments:t}),{moveTo:function(){t.push({name:"moveTo",arguments:arguments})},lineTo:function(){t.push({name:"lineTo",arguments:arguments})},arcTo:function(){t.push({name:"arcTo",arguments:arguments})},bezierCurveTo:function(){t.push({name:"bezierCurveTo",arguments:arguments})},quadraticCurveTo:function(){t.push({name:"quadraticCurveTo",arguments:arguments})}}},drawImage:function(){n.push({type:"function",name:"drawImage",arguments:arguments})},fillText:function(){n.push({type:"function",name:"fillText",arguments:arguments})},setVariable:function(t,e){return n.push({type:"variable",name:t,arguments:e}),e}}}(e?n.width:Math.max(Math.max(s.body.scrollWidth,s.documentElement.scrollWidth),Math.max(s.body.offsetWidth,s.documentElement.offsetWidth),Math.max(s.body.clientWidth,s.documentElement.clientWidth)),e?n.height:Math.max(Math.max(s.body.scrollHeight,s.documentElement.scrollHeight),Math.max(s.body.offsetHeight,s.documentElement.offsetHeight),Math.max(s.body.clientHeight,s.documentElement.clientHeight))),o={ctx:a,opacity:function(t,e,n){return t.setVariable("globalAlpha",m(e,"opacity")*(n?n.opacity:1))}(a,t,e),cssPosition:m(t,"position"),borders:function(e){return["Top","Right","Bottom","Left"].map(function(t){return{width:c(e,"border"+t+"Width"),color:m(e,"border"+t+"Color")}})}(t),transform:r,clip:e&&e.clip?f.Extend({},e.clip):null};return function(t,e,n){var r,a="static"!==e.cssPosition,o=a?m(t,"zIndex"):"auto",i=m(t,"opacity"),l="none"!==m(t,"cssFloat");e.zIndex=r=function(t){return{zindex:t,children:[]}}(o),r.isPositioned=a,r.isFloated=l,r.opacity=i,r.ownStacking="auto"!==o||i<1,n&&n.zIndex.children.push(e)}(t,o,e),!0===d.useOverflow&&!0===/(hidden|scroll|auto)/.test(m(t,"overflow"))&&!1===/(BODY)/i.test(t.nodeName)&&(o.clip=o.clip?C(o.clip,n):n),o}function G(t,e,n,r){var a,o=function(t){var e,n=m(t,"transform")||m(t,"-webkit-transform")||m(t,"-moz-transform")||m(t,"-ms-transform")||m(t,"-o-transform"),r=m(t,"transform-origin")||m(t,"-webkit-transform-origin")||m(t,"-moz-transform-origin")||m(t,"-ms-transform-origin")||m(t,"-o-transform-origin")||"0px 0px";if(r=r.split(" ").map(V).map(f.asFloat),n&&"none"!==n){var a=n.match(D);if(a)switch(a[1]){case"matrix":e=a[2].split(",").map(f.trimText).map(f.asFloat)}}return{origin:r,matrix:e}}(t),i=function(t,e){var n=e.matrix?f.OffsetBounds(t):f.Bounds(t);return e.origin[0]+=n.left,e.origin[1]+=n.top,n}(t,o),l=$(t,e,i,o),s=l.borders,c=l.ctx,d=function(t,e,n){var r={left:e.left+t[3].width,top:e.top+t[0].width,width:e.width-(t[1].width+t[3].width),height:e.height-(t[0].width+t[2].width)};return n&&(r=C(r,n)),r}(s,i,l.clip),h=L(t,i,s),u=p.test(t.nodeName)?"#efefef":m(t,"backgroundColor");switch(O(c,h.clip),c.save(),c.clip(),0<d.height&&0<d.width&&!r?(function(t,e,n){y(t,e.left,e.top,e.width,e.height,n)}(c,i,u),function(t,e,n){for(var r,a=m(t,"backgroundImage"),o=f.parseBackgroundImage(a),i=o.length;i--;){if((a=o[i]).args&&0!==a.args.length)(r=k("url"===a.method?a.args[0]:a.value))?F(t,e,n,r,i):f.log("html2canvas: Error loading background:",a)}}(t,d,c)):r&&(l.backgroundColor=u),c.restore(),h.borders.forEach(function(t){!function(t,e,n){"transparent"!==n&&(t.setVariable("fillStyle",n),O(t,e),t.fill(),1)}(c,t.args,t.color)}),n||function(t,e){var n=B(t,":before"),r=B(t,":after");(n||r)&&(n&&(t.className+=" "+g+"-before",t.parentNode.insertBefore(n,t),W(n,e,!0),t.parentNode.removeChild(n),t.className=t.className.replace(g+"-before","").trim()),r&&(t.className+=" "+g+"-after",t.appendChild(r),W(r,e,!0),t.removeChild(r),t.className=t.className.replace(g+"-after","").trim()))}(t,l),t.nodeName){case"IMG":(a=k(t.getAttribute("src")))?T(c,t,a,i,s):f.log("html2canvas: Error loading <img>:"+t.getAttribute("src"));break;case"INPUT":/^(text|url|email|submit|button|reset)$/.test(t.type)&&0<(t.value||t.placeholder||"").length&&z(t,i,l);break;case"TEXTAREA":0<(t.value||t.placeholder||"").length&&z(t,i,l);break;case"SELECT":0<(t.options||t.placeholder||"").length&&z(t,i,l);break;case"LI":v(t,l,d);break;case"CANVAS":T(c,t,t,i,s)}return l}function W(t,e,n){!function(t){return"none"!==m(t,"display")&&"hidden"!==m(t,"visibility")&&!t.hasAttribute("data-html2canvas-ignore")}(t)||(e=G(t,e,n,!1)||e,p.test(t.nodeName)||H(t,e,n))}function H(e,n,r){f.Children(e).forEach(function(t){t.nodeType===t.ELEMENT_NODE?W(t,n,r):t.nodeType===t.TEXT_NODE&&x(e,t,n)})}return r=m(q.documentElement,"backgroundColor"),a=f.isTransparent(r)&&t===q.body,o=G(t,null,!1,a),H(t,o),a&&(r=o.backgroundColor),i.removeChild(e),{backgroundColor:r,stack:o}},_.Preload=function(i){var r,a,t,e,l={numLoaded:0,numFailed:0,numTotal:0,cleanupDone:!1},o=_.Util,s=0,n=i.elements[0]||q.body,c=n.ownerDocument,d=n.getElementsByTagName("img"),h=d.length,u=c.createElement("a"),f=(new Image).crossOrigin!==X;function p(){o.log("html2canvas: start: images: "+l.numLoaded+" / "+l.numTotal+" (failed: "+l.numFailed+")"),!l.firstRun&&l.numLoaded>=l.numTotal&&(o.log("Finished loading images: # "+l.numTotal+" (failed: "+l.numFailed+")"),"function"==typeof i.complete&&i.complete(l))}function g(t,e,n){var r,a,o=i.proxy;u.href=t,t=u.href,r="html2canvas_"+s++,n.callbackname=r,-1<o.indexOf("?")?o+="&":o+="?",o+="url="+encodeURIComponent(t)+"&callback="+r,a=c.createElement("script"),j[r]=function(t){"error:"===t.substring(0,6)?(n.succeeded=!1,l.numLoaded++,l.numFailed++,p()):(w(e,n),e.src=t),j[r]=X;try{delete j[r]}catch(t){}a.parentNode.removeChild(a),a=null,delete n.script,delete n.callbackname},a.setAttribute("type","text/javascript"),a.setAttribute("src",o),n.script=a,j.document.body.appendChild(a)}function m(t,e){var n=j.getComputedStyle(t,e),r=n.content;"url"===r.substr(0,3)&&a.loadImage(_.Util.parseBackgroundImage(r)[0].args[0]),b(n.backgroundImage,t)}function y(t){return t&&t.method&&t.args&&0<t.args.length}function b(t,e){var n;_.Util.parseBackgroundImage(t).filter(y).forEach(function(t){"url"===t.method?a.loadImage(t.args[0]):t.method.match(/\-?gradient$/)&&(n===X&&(n=_.Util.Bounds(e)),function(t,e){var n=_.Generate.Gradient(t,e);n!==X&&(l[t]={img:n,succeeded:!0},l.numTotal++,l.numLoaded++,p())}(t.value,n))})}function w(e,n){e.onload=function(){n.timer!==X&&j.clearTimeout(n.timer),l.numLoaded++,n.succeeded=!0,e.onerror=e.onload=null,p()},e.onerror=function(){if("anonymous"===e.crossOrigin&&(j.clearTimeout(n.timer),i.proxy)){var t=e.src;return e=new Image,(n.img=e).src=t,void g(e.src,e,n)}l.numLoaded++,l.numFailed++,n.succeeded=!1,e.onerror=e.onload=null,p()}}for(u.href=j.location.href,r=u.protocol+u.host,a={loadImage:function(t){var e,n;t&&l[t]===X&&(e=new Image,t.match(/data:image\/.*;base64,/i)?(e.src=t.replace(/url\(['"]{0,}|['"]{0,}\)$/gi,""),n=l[t]={img:e},l.numTotal++,w(e,n)):!function(t){return u.href=t,u.href=u.href,u.protocol+u.host===r}(t)&&!0!==i.allowTaint?f&&!i.allowTaint&&i.useCORS?(e.crossOrigin="anonymous",n=l[t]={img:e},l.numTotal++,w(e,n),e.src=t):i.proxy&&(n=l[t]={img:e},l.numTotal++,g(t,e,n)):(n=l[t]={img:e},l.numTotal++,w(e,n),e.src=t))},cleanupDOM:function(t){var e,n;if(!l.cleanupDone){for(n in t&&"string"==typeof t?o.log("html2canvas: Cleanup because: "+t):o.log("html2canvas: Cleanup after timeout: "+i.timeout+" ms."),l)if(l.hasOwnProperty(n)&&"object"==typeof(e=l[n])&&e.callbackname&&e.succeeded===X){j[e.callbackname]=X;try{delete j[e.callbackname]}catch(t){}e.script&&e.script.parentNode&&(e.script.setAttribute("src","about:blank"),e.script.parentNode.removeChild(e.script)),l.numLoaded++,l.numFailed++,o.log("html2canvas: Cleaned up failed img: '"+n+"' Steps: "+l.numLoaded+" / "+l.numTotal)}j.stop!==X?j.stop():q.execCommand!==X&&q.execCommand("Stop",!1),q.close!==X&&q.close(),l.cleanupDone=!0,t&&"string"==typeof t||p()}},renderingDone:function(){e&&j.clearTimeout(e)}},0<i.timeout&&(e=j.setTimeout(a.cleanupDOM,i.timeout)),o.log("html2canvas: Preload starts: finding background-images"),l.firstRun=!0,function t(e){var n=!1;try{o.Children(e).forEach(t)}catch(t){}try{n=e.nodeType}catch(t){n=!1,o.log("html2canvas: failed to access some element's nodeType - Exception: "+t.message)}if(1===n||n===X){!function(t){m(t,":before"),m(t,":after")}(e);try{b(o.getCSS(e,"backgroundImage"),e)}catch(t){o.log("html2canvas: failed to get background-image - Exception: "+t.message)}b(e)}}(n),o.log("html2canvas: Preload: Finding images"),t=0;t<h;t+=1)a.loadImage(d[t].getAttribute("src"));return l.firstRun=!1,o.log("html2canvas: Preload: Done."),l.numTotal===l.numLoaded&&p(),a},_.Renderer=function(t,n){return function(t){var e;if("string"==typeof n.renderer&&_.Renderer[t]!==X)e=_.Renderer[t](n);else{if("function"!=typeof t)throw new Error("Unknown renderer");e=t(n)}if("function"!=typeof e)throw new Error("Invalid renderer defined");return e}(n.renderer)(t,n,q,(e=t.stack,l=[],function e(t,n,r){var a="auto"===n.zIndex.zindex?0:Number(n.zIndex.zindex),o=t,i=n.zIndex.isPositioned,l=n.zIndex.isFloated,s={node:n},c=r;n.zIndex.ownStacking?(o=s.context={"!":[{node:n,children:[]}]},c=X):(i||l)&&(c=s.children=[]),0===a&&r?r.push(s):(t[a]||(t[a]=[]),t[a].push(s)),n.zIndex.children.forEach(function(t){e(o,t,c)})}(r={},e),function o(i){Object.keys(i).sort().forEach(function(t){var e=[],n=[],r=[],a=[];i[t].forEach(function(t){t.node.zIndex.isPositioned||t.node.zIndex.opacity<1?r.push(t):t.node.zIndex.isFloated?n.push(t):e.push(t)}),function e(t){t.forEach(function(t){a.push(t),t.children&&e(t.children)})}(e.concat(n,r)),a.forEach(function(t){t.context?o(t.context):l.push(t.node)})})}(r),l),_);var e,r,l},_.Util.Support=function(t,r){return{rangeBounds:(a=!1,r.createRange&&(e=r.createRange()).getBoundingClientRect&&((n=r.createElement("boundtest")).style.height="123px",n.style.display="block",r.body.appendChild(n),e.selectNode(n),123===e.getBoundingClientRect().height&&(a=!0),r.body.removeChild(n)),a),svgRendering:t.svgRendering&&function(){var t=new Image,e=r.createElement("canvas"),n=e.getContext!==X&&e.getContext("2d");if(!1===n)return!1;e.width=e.height=10,t.src=["data:image/svg+xml,","<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'>","<foreignObject width='10' height='10'>","<div xmlns='http://www.w3.org/1999/xhtml' style='width:10;height:10;'>","sup","</div>","</foreignObject>","</svg>"].join("");try{n.drawImage(t,0,0),e.toDataURL()}catch(t){return!1}return _.Util.log("html2canvas: Parse: SVG powered rendering available"),!0}()};var e,n,a},j.html2canvas=function(t,e){var n,r,a={logging:!1,elements:t=t.length?t:[t],background:"#fff",proxy:null,timeout:0,useCORS:!1,allowTaint:!1,svgRendering:!1,ignoreElements:"IFRAME|OBJECT|PARAM",useOverflow:!0,letterRendering:!1,chinese:!1,width:null,height:null,taintTest:!0,renderer:"Canvas"};return a=_.Util.Extend(e,a),_.logging=a.logging,a.complete=function(t){"function"==typeof a.onpreloaded&&!1===a.onpreloaded(t)||(n=_.Parse(t,a),"function"==typeof a.onparsed&&!1===a.onparsed(n)||(r=_.Renderer(n,a),"function"==typeof a.onrendered&&a.onrendered(r)))},j.setTimeout(function(){_.Preload(a)},0),{render:function(t,e){return _.Renderer(t,_.Util.Extend(e,a))},parse:function(t,e){return _.Parse(t,_.Util.Extend(e,a))},preload:function(t){return _.Preload(_.Util.Extend(t,a))},log:_.Util.log}},j.html2canvas.log=_.Util.log,j.html2canvas.Renderer={Canvas:X},_.Renderer.Canvas=function(n){n=n||{};var r=q,a=[],o=q.createElement("canvas"),i=o.getContext("2d"),d=_.Util,h=n.canvas||r.createElement("canvas");function u(t,e){switch(e.type){case"variable":t[e.name]=e.arguments;break;case"function":switch(e.name){case"createPattern":if(0<e.arguments[0].width&&0<e.arguments[0].height)try{t.fillStyle=t.createPattern(e.arguments[0],"repeat")}catch(t){d.log("html2canvas: Renderer: Error creating pattern",t.message)}break;case"drawShape":!function(e,t){e.beginPath(),t.forEach(function(t){e[t.name].apply(e,t.arguments)}),e.closePath()}(t,e.arguments);break;case"drawImage":0<e.arguments[8]&&0<e.arguments[7]&&(!n.taintTest||n.taintTest&&function(t){if(-1===a.indexOf(t.arguments[0].src)){i.drawImage(t.arguments[0],0,0);try{i.getImageData(0,0,1,1)}catch(t){return o=r.createElement("canvas"),i=o.getContext("2d"),!1}a.push(t.arguments[0].src)}return!0}(e))&&t.drawImage.apply(t,e.arguments);break;default:t[e.name].apply(t,e.arguments)}}}return function(t,e,n,r,a){var o,i,l,s=h.getContext("2d"),c=t.stack;return h.width=h.style.width=e.width||c.ctx.width,h.height=h.style.height=e.height||c.ctx.height,l=s.fillStyle,s.fillStyle=d.isTransparent(c.backgroundColor)&&e.background!==X?e.background:t.backgroundColor,s.fillRect(0,0,h.width,h.height),s.fillStyle=l,r.forEach(function(t){s.textBaseline="bottom",s.save(),t.transform.matrix&&(s.translate(t.transform.origin[0],t.transform.origin[1]),s.transform.apply(s,t.transform.matrix),s.translate(-t.transform.origin[0],-t.transform.origin[1])),t.clip&&(s.beginPath(),s.rect(t.clip.left,t.clip.top,t.clip.width,t.clip.height),s.clip()),t.ctx.storage&&t.ctx.storage.forEach(function(t){u(s,t)}),s.restore()}),d.log("html2canvas: Renderer: Canvas renderer done - returning canvas obj"),1===e.elements.length&&"object"==typeof e.elements[0]&&"BODY"!==e.elements[0].nodeName?(i=a.Util.Bounds(e.elements[0]),(o=n.createElement("canvas")).width=Math.ceil(i.width),o.height=Math.ceil(i.height),(s=o.getContext("2d")).drawImage(h,i.left,i.top,i.width,i.height,0,0,i.width,i.height),h=null,o):h}}}(window,document);
+</script>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"Верхний колонтитул Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 233.85pt right 467.75pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"Нижний колонтитул Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 233.85pt right 467.75pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span.a
+	{mso-style-name:"Верхний колонтитул Знак";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Верхний колонтитул";}
+span.a0
+	{mso-style-name:"Нижний колонтитул Знак";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Нижний колонтитул";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("Шаблон%20расчёта%20матриц%20черновик.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("Шаблон%20расчёта%20матриц%20черновик.files/header.htm") fcs;
+	mso-endnote-separator:url("Шаблон%20расчёта%20матриц%20черновик.files/header.htm") es;
+	mso-endnote-continuation-separator:url("Шаблон%20расчёта%20матриц%20черновик.files/header.htm") ecs;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-footer:url("Шаблон%20расчёта%20матриц%20черновик.files/header.htm") f1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Обычная таблица";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+table.MsoTableGrid
+	{mso-style-name:"Сетка таблицы";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+
+<style>
+.button {
+  position: relative;
+  background-color: #f79646;
+  border: none;
+  font-size: 15px;
+  color: #FFFFFF;
+  padding: 5px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+</style>
+<style>
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.container {
+  box-shadow: 0.2em 1em 2em -1em #d6d1e0;
+  margin: 2.4em 0;
+}
+
+details {
+  background: #fff;
+  border: 1px solid #d6d1e0;
+  border-bottom: 0;
+  list-style: none;
+}
+details:first-child {
+  border-radius: 6px 6px 0 0;
+}
+details:last-child {
+  border-bottom: 1px solid #d6d1e0;
+  border-radius: 0 0 6px 6px;
+}
+
+summary {
+  display: block;
+  transition: 0.2s;
+  font-weight: 700;
+  padding: 0.5em;
+}
+summary:focus {
+  outline: 1px;
+}
+
+.collapse-init summary::after {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  content: '';
+  float: right;
+  width: 0.5em;
+  height: 0.5em;
+  margin-top: 0.25em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: inherit;
+}
+[open] summary {
+}
+[open] summary::after {
+  margin-top: 0.5em;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+</style>
+</head>
+
+<body lang=RU link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<h2>Расчёт Квадрата Пифагора</h2>
+<div>
+
+<textarea id="myTextarea" style="height:100px;width:100%" autocomplete="off" placeholder="26.10.1879;Троцкий
+13.03.1961;Елена Малышева">
+</textarea>
+<br/>
+<!--
+accordion
+https://codepen.io/giana/pen/OrpdLK
+-->
+<div class="collapse collapse-init" style="cursor: pointer">
+<details class="panel-active">
+<summary>Фильтр</summary>
+<div class="details-wrapper" style="">
+<div class="details-styling">
+<form autocomplete="off">
+<div id="multipleInput">
+
+<table style="width:100%">
+  <tr>
+    <td width="10%">Присутствующие Числа</td>
+    <td width=""><input type="text" id="filter" value="" placeholder="Фильтр Присутсвующие Числа, пример: 3-333, 222, 55, 4" autocomplete="off" style="width:100%" style="" onkeypress="return enterPressed(event)"></td>
+  </tr>
+  <tr>
+    <td>Отсутсвующие Числа</td>
+    <td><input type="text" id="filterAbsent" value="" placeholder="Фильтр Отсутсвующие Числа, пример: 5,8 (Это значит матрица вообще без 5ок и 8ок)" autocomplete="off" style="width:100%" style="" onkeypress="return enterPressed(event)"></td>
+  </tr>
+  <tr>
+    <td>Имя Человека</td>
+    <td><input type="text" id="filterName" value="" placeholder="Фильтр Имя, пример: Алексей,Александр" autocomplete="off" style="width:100%" style="" onkeypress="return enterPressed(event)"></td>
+  </tr>
+  <tr>
+    <td>Уровень Души</td>
+    <td><input type="text" id="filterSoulLevel" value="" placeholder="Уровень Души, пример: 0-20,31-35,40 (Указываются диапазоны чисел или конкретные значения через запятую)" autocomplete="off" style="width:100%" style="" onkeypress="return enterPressed(event)"></td>
+  </tr>
+  <tr>
+    <td>Дата</td>
+    <td><input type="text" id="filterDay" value="" placeholder="Фильтр День, пример: 1-5,12,13 (Диапазон + конкретные значения)" autocomplete="off" style="width:33%" style="" onkeypress="return enterPressed(event)">
+    <input type="text" id="filterMonth" value="" placeholder="Фильтр Месяц, пример: 1-5,10,12 (Диапазон + конкретные значения)" autocomplete="off" style="width:33%" style="" onkeypress="return enterPressed(event)">
+    <input type="text" id="filterYear" value="" placeholder="Фильтр Год, пример: 1910-1950,1951 (Диапазон + конкретные значения)" autocomplete="off" style="width:33%" style="" onkeypress="return enterPressed(event)"></td>
+  </tr>
+  <tr>
+    <td>Столбцы</td>
+    <td><input type="text" id="filterStolb1" value="" placeholder="Фильтр Столб1, пример: 1-5,12,13 (Диапазон + конкретные значения)" autocomplete="off" style="width:49.6%" style="" onkeypress="return enterPressed(event)"> <input type="text" id="filterStolb2" value="" placeholder="Фильтр Столб2, пример: 1-5,10,12 (Диапазон + конкретные значения)" autocomplete="off" style="width:49.6%" style="" onkeypress="return enterPressed(event)"></td>
+  </tr>
+  <tr>
+    <td>Потоки</td>
+    <td><input type="text" id="filterFlowUp" value="" placeholder="Восходящий поток, пример: 1-5,10,12 (Диапазон + конкретные значения)" autocomplete="off" style="width:25%" style="" onkeypress="return enterPressed(event)"> <input type="text" id="filterFlowDown" value="" placeholder="Низходящий поток, пример: 1-5,12,13 (Диапазон + конкретные значения)" autocomplete="off" style="width:25%" style="" onkeypress="return enterPressed(event)"><span style="width:50%"><input type="checkbox" id="filterFlowUpBool" checked="checked" value="" placeholder="" autocomplete="off"  style="" onkeypress="return enterPressed(event)"></input>Восходящий преобладает <input type="checkbox" id="filterFlowDownBool" checked="checked" value="" placeholder="" autocomplete="off"  style="" onkeypress="return enterPressed(event)"></input>Нисходящий преобладает 
+    <input type="checkbox" id="filterFlowEqualsBool" checked="checked" value="" placeholder="" autocomplete="off"  style="" onkeypress="return enterPressed(event)"></input>Потоки совпадают</span></td>
+  </tr>
+  <tr>
+    <td width="10%">Показать только</td>
+    <td width=""><input type="text" id="filterShowOnlyDigits" value="" placeholder="Фильтр на Числа, которые показывать, пример: 2,4" autocomplete="off" style="width:100%" style="" ></td>
+  </tr>
+  <tr>
+    <td>Психотипы</td>
+    <td><input type="checkbox" id="filterPsyType1" checked="checked" value="" placeholder="" autocomplete="off"  style="" onkeypress="return enterPressed(event)"></input>1 Тип <input type="checkbox" id="filterPsyType2" checked="checked" value="" placeholder="" autocomplete="off"  style="" onkeypress="return enterPressed(event)"></input>2 Тип <input type="checkbox" id="filterPsyType3" checked="checked" value="" placeholder="" autocomplete="off"  style="" onkeypress="return enterPressed(event)"></input>3 Тип</td>
+  </tr>
+</table>
+<div style="margin-left:2px">
+<label class="container" style="display:inline;">Скрыть вспомогательные числа
+  <input type="checkbox" onclick="showHideAdditionalDigits();">
+  <span class="checkmark"></span>
+</label>
+<label class="container" style="display:inline;">Скрыть имена
+  <input type="checkbox" onclick="showHideNames();">
+  <span class="checkmark"></span>
+</label>
+<label class="container" style="display:inline;">Скрыть Даты Рождения
+  <input type="checkbox" onclick="showHideBirthdays();">
+  <span class="checkmark"></span>
+</label>
+</div>
+</form>
+
+
+</div>
+</div>
+</details>
+</div>
+
+</div>
+<button type="button" class="button" onclick="SelectContent('copycontent');" class="button">Копировать Данные</button>
+<button  type="button" onclick="calcPifagors()" class="button" style="background-color: #4CAF50">Расcчитать</button>
+<div id="importData" style="display:inline;">
+<button  type="button" onclick="clearDates()" class="button" style="background-color: #33ccff">Очистить Даты и Фильтр</button>
+<button  type="button" onclick="saveAsImg()" class="button" style="background-color: #3369ff9e">Сохранить как картинку</button>
+Импорт (Файлы): <input type="file" id="files" name="files[]" multiple accept=".txt" />
+Импорт (Папка): <input type="file" id="folder" webkitdirectory mozdirectory accept=".txt" />
+</div>
+<br/>
+<br/>
+<div id="resultMsg" style="background-color: #e6f9ff"></div>
+<br/>
+<div id="resultError" style="background-color: #ffe6e6"></div>
+<!--
+<p>Папка: <input type="file" webkitdirectory mozdirectory accept=".txt" /></p>
+<p>Файлы: <input type="file" multiple accept=".txt" /></p>
+-->
+<!--<button type="button" onclick="SelectContent('copycontent');" class="button">Копировать Данные</button>-->
+<!--<button onclick="switchInputMode()" class="button">Один/Несколько Человек</button>-->
+<!--<button onclick="showHideAdditionalDigits()" class="button">Показать/Скрыть вспомогательные числа</button>-->
+
+<br/>
+
+
+<script>
+	
+	function saveAsImg() {
+	
+		
+	
+		var copycontent = document.getElementById('copycontent');
+		
+		//html2canvas(copycontent).then(canvas => {
+		//	document.body.appendChild(canvas)
+		//});
+		
+		//document.body.style.background = "#ccc";
+		
+		html2canvas(copycontent, {
+			backgroundColor:null,
+			//backgroundColor:'#ffffff', 
+			//background: "#00FF00",
+		//	allowTaint: true,
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                //document.body.appendChild(canvas);
+
+					//var dataURL = canvas.toDataURL();	
+					
+					//canvas.style.backgroundColor = 'rgba(158, 167, 184, 0.2)';
+					
+					var url = canvas.toDataURL("image/jpeg");
+					
+					var aux = document.createElement("a");
+					aux.setAttribute("href", url);
+					aux.setAttribute("download", "pifagor");
+					//aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
+					document.body.appendChild(aux);
+					aux.click();
+					aux.remove();
+					
+					/*
+                  $("<a>", {
+                    href: url,
+                    download: "fileName"
+                  })
+                  .on("click", function() {$(this).remove()})
+                  .appendTo("body")[0].click()
+				  */
+                
+/*					
+				    var aux = document.createElement("div");
+					aux.setAttribute("contentEditable", true);
+					aux.innerHTML = dataURL;
+					aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
+					document.body.appendChild(aux);
+					aux.focus();
+					document.execCommand("copy");
+					document.body.removeChild(aux);
+					*/
+				
+                // Convert and download as image 
+                //Canvas2Image.saveAsJPEG(canvas); 
+                //$("#img-out").append(canvas);
+                // Clean up 
+                //document.body.removeChild(canvas);
+            }
+        });
+	}
+
+	function clearPifagorTables() {
+		var divTalbes = document.getElementById('tables');
+		//alert(divTalbes);
+		while (divTalbes.firstChild) {
+		  divTalbes.removeChild(divTalbes.firstChild);
+		}
+	}
+
+	function handleFileSelectClear(evt) {
+		document.getElementById("files").value = "";
+		document.getElementById("folder").value = "";
+	}
+
+   document.getElementById('files').addEventListener('click', handleFileSelectClear, false);
+   document.getElementById('folder').addEventListener('click', handleFileSelectClear, false);
+
+	function clearDates() {
+		document.getElementById( 'myTextarea' ).value = "";
+		document.getElementById( 'filter' ).value = "";
+		document.getElementById( 'filterAbsent' ).value = "";
+		document.getElementById( 'filterName' ).value = "";
+		document.getElementById( 'filterSoulLevel' ).value = "";
+		document.getElementById( 'filterDay' ).value = "";
+		document.getElementById( 'filterMonth' ).value = "";
+		document.getElementById( 'filterYear' ).value = "";
+		document.getElementById( 'filterStolb1' ).value = "";
+		document.getElementById( 'filterStolb2' ).value = "";
+		document.getElementById( 'filterFlowUp' ).value = "";
+		document.getElementById( 'filterFlowDown' ).value = "";
+		document.getElementById( 'filterFlowUpBool' ).checked = "checked";
+		document.getElementById( 'filterFlowDownBool' ).checked = "checked";
+		document.getElementById( 'filterFlowEqualsBool' ).checked = "checked";
+		document.getElementById( 'filterShowOnlyDigits' ).value = "";
+		document.getElementById( 'filterPsyType1' ).checked = "checked";
+		document.getElementById( 'filterPsyType2' ).checked = "checked";
+		document.getElementById( 'filterPsyType3' ).checked = "checked";
+		clearPifagorTables();
+		document.getElementById("resultMsg").innerHTML  = "";
+		document.getElementById("resultError").innerHTML  = "";
+	}
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+	var result = "";
+	logMessages = [];
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+		if(f.type != 'text/plain') {
+			continue;
+		}
+	
+		console.log(f.name);
+		
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          //console.log(e.target.result);
+		  
+		  console.log(e.target.result);
+
+		 //logMessages.push("Начало конвертации...");
+		  
+          var el = document.getElementById( 'myTextarea' );
+		  el.value = el.value + e.target.result;
+          
+          //alert(el.getElementsByClassName('MsoTableGrid').length);
+          /*
+		  try {
+          
+			  var tables = el.getElementsByClassName('MsoTableGrid');
+			  
+			  logMessages.push("tables length:" + tables.length);
+			  document.getElementById("log").value = logMessages.join("\n");
+			  
+			  for(var i = 0; i < tables.length; i++) {
+				
+				try {
+			  
+					var table = tables[i];
+					
+					result = result + getDataFromTable(table, 0, 0);
+					result = result + getDataFromTable(table, 1, 6);
+				
+				} catch(e) {
+					logMessages.push('Ошибка первый уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
+					document.getElementById("log").value = logMessages.join("\n");
+				}
+			  }
+		  
+		  } catch(e) {
+			logMessages.push('Ошибка второй уровень ' + e.name + ":" + e.message + " stack: " + e.stack);
+			document.getElementById("log").value = logMessages.join("\n");
+		  }
+		  
+		  document.getElementById("result").value = result;
+		  document.getElementById("log").value = logMessages.join("\n");
+          console.log(result);
+		  */
+		  
+		  //document.getElementById("files").value = "";
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      //reader.readAsText(f,['cP1251']);
+	  reader.readAsText(f,'cP1251');
+    }
+  }
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+document.getElementById('folder').addEventListener('change', handleFileSelect, false);
+</script>
+
+<div id="copycontent" style="background: white">
+	<div id=tables style=""></div>
+</div>
+
+<div id="tmpl" style="display: inline-block; padding-left: 10px">
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=663
+ style='width:497.15pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:14.6pt'>
+  <td width=333 colspan=6 style='width:250.0pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#C00000'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=330 colspan=6 style='width:247.15pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#C00000'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:15.4pt'>
+  <td width=55 style='width:41.2pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.5pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:42.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#C00000'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
+  normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
+  191'><o:p></o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
+  normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
+  191'><o:p></o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.75pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:41.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#C00000'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
+  normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
+  191'><o:p></o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
+  normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
+  191'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:14.6pt'>
+  <td width=55 style='width:41.2pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;mso-border-bottom-alt:solid #F79646 .5pt;
+  mso-border-bottom-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:windowtext'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.5pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;mso-border-bottom-alt:solid #F79646 .5pt;
+  mso-border-bottom-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:windowtext'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.05pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid #F79646 .5pt;mso-border-bottom-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:windowtext'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:42.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
+  normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
+  191'><o:p></o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.75pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid #F79646 .5pt;mso-border-bottom-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.3pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;mso-border-bottom-alt:solid #F79646 .5pt;
+  mso-border-bottom-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.0pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;mso-border-bottom-alt:solid #F79646 .5pt;
+  mso-border-bottom-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:41.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:12.0pt;mso-bidi-font-size:11.0pt;color:#BFBFBF;mso-themecolor:
+  background1;mso-themeshade:191'>&nbsp;</span></b><b style='mso-bidi-font-weight:
+  normal'><span style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:
+  191'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:15.4pt'>
+  <td width=55 style='width:41.2pt;border:solid #F79646 1.0pt;mso-border-themecolor:
+  accent6;border-top:none;mso-border-top-alt:solid #F79646 .5pt;mso-border-top-themecolor:
+  accent6;mso-border-top-alt:.5pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+  .75pt;mso-border-right-alt:.75pt;mso-border-color-alt:#F79646;mso-border-themecolor:
+  accent6;mso-border-style-alt:solid;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.5pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .75pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .75pt;
+  mso-border-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.05pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  mso-border-top-alt:solid #F79646 .5pt;mso-border-top-themecolor:accent6;
+  mso-border-left-alt:solid #F79646 .75pt;mso-border-left-themecolor:accent6;
+  mso-border-top-alt:.5pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:.75pt;
+  mso-border-right-alt:.5pt;mso-border-color-alt:#F79646;mso-border-themecolor:
+  accent6;mso-border-style-alt:solid;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:42.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p></o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid #F79646 1.0pt;mso-border-right-themecolor:
+  accent6;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid #F79646 .5pt;
+  mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.75pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  mso-border-top-alt:solid #F79646 .5pt;mso-border-top-themecolor:accent6;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  mso-border-alt:solid #F79646 .5pt;mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;
+  height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.3pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .5pt;
+  mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.0pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .5pt;
+  mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:41.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p></o:p></span></b></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#BFBFBF;mso-themecolor:background1;mso-themeshade:191'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:14.6pt'>
+  <td width=55 style='width:41.2pt;border:solid #F79646 1.0pt;mso-border-themecolor:
+  accent6;border-top:none;mso-border-top-alt:solid #F79646 .75pt;mso-border-top-themecolor:
+  accent6;mso-border-alt:solid #F79646 .75pt;mso-border-themecolor:accent6;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.5pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .75pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .75pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .75pt;
+  mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.05pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  mso-border-top-alt:solid #F79646 .75pt;mso-border-top-themecolor:accent6;
+  mso-border-left-alt:solid #F79646 .75pt;mso-border-left-themecolor:accent6;
+  mso-border-alt:solid #F79646 .75pt;mso-border-themecolor:accent6;mso-border-right-alt:
+  solid #F79646 .5pt;mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;
+  height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:42.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><i style='mso-bidi-font-style:normal'><span
+  style='font-size:9.0pt;mso-bidi-font-size:11.0pt;color:windowtext'>1столб<o:p></o:p></span></i></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid #F79646 1.0pt;mso-border-right-themecolor:
+  accent6;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid #F79646 .5pt;
+  mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><i style='mso-bidi-font-style:normal'><span
+  style='font-size:9.0pt;mso-bidi-font-size:11.0pt;color:windowtext'>2столб<o:p></o:p></span></i></p>
+  </td>
+  <td width=54 style='width:40.75pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  mso-border-top-alt:solid #F79646 .5pt;mso-border-top-themecolor:accent6;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  mso-border-alt:solid #F79646 .5pt;mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;
+  height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.3pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .5pt;
+  mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.0pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .5pt;
+  mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='color:#00B0F0;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:41.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><i style='mso-bidi-font-style:normal'><span
+  lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:11.0pt;color:windowtext;
+  mso-ansi-language:EN-US'>1</span></i><i style='mso-bidi-font-style:normal'><span
+  style='font-size:9.0pt;mso-bidi-font-size:11.0pt;color:windowtext'>столб<o:p></o:p></span></i></p>
+  </td>
+  <td width=54 style='width:40.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.6pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><i style='mso-bidi-font-style:normal'><span
+  style='font-size:9.0pt;mso-bidi-font-size:11.0pt;color:windowtext'>2столб<o:p></o:p></span></i></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes;height:15.4pt'>
+  <td width=55 style='width:41.2pt;border:solid #F79646 1.0pt;mso-border-themecolor:
+  accent6;border-top:none;mso-border-top-alt:solid #F79646 .75pt;mso-border-top-themecolor:
+  accent6;mso-border-top-alt:.75pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+  .5pt;mso-border-right-alt:.75pt;mso-border-color-alt:#F79646;mso-border-themecolor:
+  accent6;mso-border-style-alt:solid;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.5pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .75pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .75pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .75pt;
+  mso-border-themecolor:accent6;mso-border-bottom-alt:solid #F79646 .5pt;
+  mso-border-bottom-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='color:#00B0F0;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.05pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  mso-border-top-alt:solid #F79646 .75pt;mso-border-top-themecolor:accent6;
+  mso-border-left-alt:solid #F79646 .75pt;mso-border-left-themecolor:accent6;
+  mso-border-top-alt:.75pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:
+  .5pt;mso-border-right-alt:.5pt;mso-border-color-alt:#F79646;mso-border-themecolor:
+  accent6;mso-border-style-alt:solid;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:42.05pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  mso-bidi-font-size:11.0pt;color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid #F79646 1.0pt;mso-border-right-themecolor:
+  accent6;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid #F79646 .5pt;
+  mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  mso-bidi-font-size:11.0pt;color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=54 style='width:40.75pt;border-top:none;border-left:none;
+  border-bottom:solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  mso-border-top-alt:solid #F79646 .5pt;mso-border-top-themecolor:accent6;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  mso-border-alt:solid #F79646 .5pt;mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;
+  height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=54 style='width:40.3pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .5pt;
+  mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=55 style='width:41.0pt;border-top:none;border-left:none;border-bottom:
+  solid #F79646 1.0pt;mso-border-bottom-themecolor:accent6;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;mso-border-top-alt:solid #F79646 .5pt;
+  mso-border-top-themecolor:accent6;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid #F79646 .5pt;
+  mso-border-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
+  style='color:#00B0F0'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width=56 style='width:41.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid #F79646 .5pt;
+  mso-border-left-themecolor:accent6;mso-border-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid #F79646 .5pt;mso-border-left-themecolor:accent6;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=57 style='width:42.6pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  mso-bidi-font-size:11.0pt;color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=54 style='width:40.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  mso-bidi-font-size:11.0pt;color:windowtext'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+</div>
+
+<script type="text/javascript">
+
+var pifagorTablePrefix = 'pifagorTable_';
+
+var hadMode = 0; //0 - show, 1 - hide
+var hideNamesMode = 0; //0 - show, 1 - hide
+var hideBirthdaysMode = 0; //0 - show, 1 - hide
+
+function showHideAdditionalDigits() {
+	hadMode = hadMode == 0 ? 1 : 0;
+	calcPifagors();
+}
+
+function showHideNames() {
+	hideNamesMode = hideNamesMode == 0 ? 1 : 0;
+	calcPifagors();
+}
+
+function showHideBirthdays() {
+	hideBirthdaysMode = hideBirthdaysMode == 0 ? 1 : 0;
+	calcPifagors();
+}
+
+function enterPressed(e) {
+    //See notes about 'which' and 'key'
+    if (e.keyCode == 13) {
+        calcPifagors();
+        return false;
+    }
+}
+
+window.addEventListener('keydown', function (e) {
+  if (e.ctrlKey && e.keyCode == 13) {
+    // Ctrl + enter pressed
+	calcPifagors();
+	return false;
+  }
+});
+
+function parseDate(str) {
+    var dateParts = str.split(".");
+    if (dateParts.length != 3)
+        return null;
+    var year = dateParts[2];
+    var month = dateParts[1];
+    var day = dateParts[0];
+
+    if (isNaN(day) || isNaN(month) || isNaN(year))
+        return null;
+
+    var result = new Date(year, (month - 1), day);
+    if (result == null)
+        return null;
+    if (result.getDate() != day)
+        return null;
+    if (result.getMonth() != (month - 1))
+        return null;
+    if (result.getFullYear() != year)
+        return null;
+
+    return result;
+}
+
+function repeats(str, count) {
+	return Array(count+1).join(str);
+}
+
+function calcPifagor(dataBirthday, personName) {
+    
+  	var result = {
+		personName: '',
+		day: '',
+        month: '',
+        year: '',
+        A: '',
+        B: '',
+        V: '',
+        G: '',
+        D: '',
+        E: '',
+      	count1: 0,
+        count2: 0,
+        count3: 0,
+        count4: 0,
+        count5: 0,
+        count6: 0,
+        count7: 0,
+        count8: 0,
+        count9: 0,
+        stolb1: 0,
+        stolb2: 0,
+		flowUp: 0,
+		flowDown: 0,
+		flowEquals: false,
+		psyType: 0,
+        errors: []
+        };
+    
+    result.id = uuidv4();
+    result.personName = personName;
+    
+    var errMsg = dataBirthday + " не корректная дата рождения (Пример 26.05.1799;Пушкин)";
+    
+    if (parseDate(dataBirthday) == null) {
+      result.errors.push(errMsg);
+      return result;
+    }
+    
+    var dataBirthdaySplited = dataBirthday.split(".");
+    
+    if(dataBirthdaySplited.length != 3) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    
+    var day = dataBirthdaySplited[0];
+	if(day.length == 1) {
+		day = "0" + day;
+	} else if(day.length != 2) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    
+    var dayInt = parseInt(day);
+    var day1 = parseInt(day.charAt(0));
+    var day2 = parseInt(day.charAt(1));
+    
+    var month = dataBirthdaySplited[1];
+    if(month.length != 2) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    var monthInt = parseInt(month);
+    var month1 = parseInt(month.charAt(0));
+    var month2 = parseInt(month.charAt(1));
+    
+    var year = dataBirthdaySplited[2];
+    if(year.length != 4) {
+    	result.errors.push(errMsg);
+        return result;
+    }
+    var yearInt = parseInt(year);
+    var year1 = parseInt(year.charAt(0));
+    var year2 = parseInt(year.charAt(1));
+    var year3 = parseInt(year.charAt(2));
+    var year4 = parseInt(year.charAt(3));
+    
+    var A = dayInt + monthInt + year1 + year2 + year3 + year4;
+    if(A > 59) {
+    	var AStr = A.toString();
+        var A1 = parseInt(AStr.charAt(0));
+    	var A2 = parseInt(AStr.charAt(1));
+        A = A1 + A2;
+    }
+    
+    var B = day1 + day2 + month1 + month2 + year1 + year2 + year3 + year4;
+    
+    var V = B;
+    if(B > 9) {
+    	var BStr = B.toString();
+        var B1 = parseInt(BStr.charAt(0));
+    	var B2 = parseInt(BStr.charAt(1));
+        V = B1 + B2;
+    }
+    
+    var G;
+    if(yearInt >= 1900 && yearInt < 2000) {
+    	G = -2;
+    } else if(yearInt >= 2000) {
+    	G = +19;
+    } else if(yearInt >= 1700 && yearInt < 1900) {
+    	G = +29;
+    } else {
+    	result.errors.push(dataBirthday + " Данный год не расчитать. Доступный год с 1700 и позже");
+		return result;
+    }
+    
+    var D = B + G;
+    
+    var E = D;
+    if(E > 9) {
+    	var DStr = D.toString();
+        var D1 = parseInt(DStr.charAt(0));
+    	var D2 = parseInt(DStr.charAt(1));
+        E = D1 + D2;
+    }
+    
+    var commonStr = day + month + year + B + V + G + D + E;
+    
+    var count1 = (commonStr.match(/1/g) || []).length;
+    var count2 = (commonStr.match(/2/g) || []).length;
+    var count3 = (commonStr.match(/3/g) || []).length;
+    var count4 = (commonStr.match(/4/g) || []).length;
+    var count5 = (commonStr.match(/5/g) || []).length;
+    var count6 = (commonStr.match(/6/g) || []).length;
+    var count7 = (commonStr.match(/7/g) || []).length;
+    var count8 = (commonStr.match(/8/g) || []).length;
+    var count9 = (commonStr.match(/9/g) || []).length;
+    
+    var stolb1 = count1 * 1 + count2 * 2 + count3 * 3;
+    var stolb2 = count4 * 4 + count5 * 5 + count6 * 6;
+	
+	var flowUp = count3 + count5 + count7;
+	var flowDown = count1 + count5 + count9;
+	var flowEquals = flowUp == flowDown;
+
+	// calculate psy type	
+	var psyType = 0;
+	if(count1 > count2) {
+		psyType = 1;
+	} else if(count1 < count2) {
+		psyType = 2;
+	} else if(count1 == count2) {
+		psyType = 3;
+	}
+	
+    result.day = day;
+    result.month = month;
+    result.year = year;
+    result.A = A; //'А=' + A;
+    result.B = B; //'Б=' + B;
+    result.V = V; //'В=' + V;
+    result.G = G; //'Г=' + G;
+    result.D = D; //'Д=' + D;
+    result.E = E; //'Е=' + E;
+    result.count1 = count1;
+    result.count2 = count2;
+    result.count3 = count3;
+    result.count4 = count4;
+    result.count5 = count5;
+    result.count6 = count6;
+    result.count7 = count7;
+    result.count8 = count8;
+    result.count9 = count9;
+    result.stolb1 = stolb1;
+    result.stolb2 = stolb2;
+	result.flowUp = flowUp;
+	result.flowDown = flowDown;
+	result.flowEquals = flowEquals;
+	result.psyType = psyType;
+    
+    return result;
+}
+
+function showAD(result) {
+	return hadMode == 0 ? result : '';
+}
+
+function showName(result) {
+	return hideNamesMode == 0 ? result : '';
+}
+
+function showBirthdays(result) {
+	return hideBirthdaysMode == 0 ? result : '';
+}
+
+function showDigits(digit) {
+
+	var filterShowOnlyDigits = document.getElementById("filterShowOnlyDigits").value.trim();
+	
+	if(digit && digit.length > 0 && filterShowOnlyDigits && filterShowOnlyDigits.length > 0) {
+		if(filterShowOnlyDigits.indexOf(digit.charAt(0)) < 0) {
+			return "";
+		}
+	}
+	
+    return digit;
+}
+	
+
+function setData(table, rowIndex, cellIndex, val) {
+	table.rows[rowIndex].cells[cellIndex].getElementsByTagName('o:p')[0].innerHTML = val;
+}
+
+function fillData(result, colInx1, colIndx2) {
+
+	var pifagorTableId = result.id;
+    
+    var rowIndex = 1;
+    var pifagorTableId = pifagorTablePrefix + pifagorTableId; 
+    //console.log(document.getElementById(pifagorTableId));
+    var table = document.getElementById(pifagorTableId).getElementsByClassName("MsoTableGrid")[0];
+    //console.log(table.rows[rowIndex].cells[0].getElementsByTagName('o:p')[0])
+    
+    setData(table, 0, 0 + colInx1, showName(result.personName));
+    
+    // 1 row
+    //table.rows[rowIndex].cells[0].innerHTML = result.day;
+    setData(table, rowIndex, 0 + colIndx2, showBirthdays(result.day));
+    setData(table, rowIndex, 1 + colIndx2, showBirthdays(result.month));
+    setData(table, rowIndex, 2 + colIndx2, showBirthdays(result.year));
+    setData(table, rowIndex, 3 + colIndx2, result.A); //'А=' + A;
+
+	// 2 row
+    rowIndex++;
+    setData(table, rowIndex, 3 + colIndx2, showAD(result.B)); //'Б=' + B;
+    setData(table, rowIndex, 4 + colIndx2, showAD(result.V)); //'В=' + V;
+    
+    // 3 row
+    rowIndex++;
+    setData(table, rowIndex, 0 + colIndx2, showDigits(repeats("1",result.count1)));
+    setData(table, rowIndex, 1 + colIndx2, showDigits(repeats("4",result.count4)));
+    setData(table, rowIndex, 2 + colIndx2, showDigits(repeats("7",result.count7)));
+    setData(table, rowIndex, 3 + colIndx2, showAD(result.G > 0 ? "+" + result.G : result.G));//'Г=' + G;
+    setData(table, rowIndex, 4 + colIndx2, showAD(result.D)); //'Д=' + D;
+    setData(table, rowIndex, 5 + colIndx2, showAD(result.E)); //'Е=' + E;
+    
+    // 4 row
+    rowIndex++;
+    setData(table, rowIndex, 0 + colIndx2, showDigits(repeats("2",result.count2)));
+    setData(table, rowIndex, 1 + colIndx2, showDigits(repeats("5",result.count5)));
+    setData(table, rowIndex, 2 + colIndx2, showDigits(repeats("8",result.count8)));
+    
+    // 5 row
+    rowIndex++;
+    setData(table, rowIndex, 0 + colIndx2, showDigits(repeats("3",result.count3)));
+    setData(table, rowIndex, 1 + colIndx2, showDigits(repeats("6",result.count6)));
+    setData(table, rowIndex, 2 + colIndx2, showDigits(repeats("9",result.count9)));
+    setData(table, rowIndex, 4 + colIndx2, result.stolb1);
+    setData(table, rowIndex, 5 + colIndx2, result.stolb2);
+}
+
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+function getFilterData(result) {
+
+    var filterResult = {
+		'digits':[],
+		'digitsAbsent':[],
+		'names':[],
+		'soulLevels':[],
+		'days':[],
+		'months':[],
+		'years':[],
+		'stolb1s':[],
+		'stolb2s':[],
+		'flowUp':[],
+		'flowDown':[],
+		'flowUpBool':true,
+		'flowDownBool':true,
+		'flowEquals':true,
+		'showOnlyDigits':[],
+		'psyType1':true,
+		'psyType2':true,
+		'psyType3':true,
+	};
+
+	fillFilterResult("filter", filterResult.digits);
+	fillFilterResult("filterAbsent", filterResult.digitsAbsent);
+	fillFilterResult("filterName", filterResult.names);
+	fillFilterResult("filterSoulLevel", filterResult.soulLevels);
+	fillFilterResult("filterDay", filterResult.days);
+	fillFilterResult("filterMonth", filterResult.months);
+	fillFilterResult("filterYear", filterResult.years);
+	fillFilterResult("filterStolb1", filterResult.stolb1s);
+	fillFilterResult("filterStolb2", filterResult.stolb2s);
+	fillFilterResult("filterFlowUp", filterResult.flowUp);
+	fillFilterResult("filterFlowDown", filterResult.flowDown);
+	fillFilterResult("filterShowOnlyDigits", filterResult.showOnlyDigits);
+	
+	filterResult.flowUpBool = document.getElementById( 'filterFlowUpBool' ).checked;
+	filterResult.flowDownBool = document.getElementById( 'filterFlowDownBool' ).checked;
+	filterResult.flowEquals = document.getElementById( 'filterFlowEqualsBool' ).checked;
+	
+	filterResult.psyType1 = document.getElementById( 'filterPsyType1' ).checked;
+	filterResult.psyType2 = document.getElementById( 'filterPsyType2' ).checked;
+	filterResult.psyType3 = document.getElementById( 'filterPsyType3' ).checked;
+
+	console.log(filterResult);
+	
+    return filterResult;
+}
+
+function fillFilterResult(elementId, array) {
+    var filterElement = document.getElementById(elementId).value;
+	if(filterElement) {
+    	filterElement = filterElement.trim();
+        var filterSplitted = filterElement.split(",");
+        for(var i=0; i<filterSplitted.length;i++) {
+        	var val = filterSplitted[i].trim();
+        	array.push(val);
+        }
+    }
+}
+
+function between(x, min, max) {
+  return x >= min && x <= max;
+}
+
+function isApplicableForFilter(filter, pifagorResult) {
+	
+	var result = true;
+	
+	if(filter.digits && filter.digits.length > 0) {
+	
+		var filterOriginal = document.getElementById("filter").value;
+	
+        if(
+          (filterOriginal.indexOf("1")<0 || isApplicableDataForDigits(filter.digits, repeats("1",pifagorResult.count1))) &&
+          (filterOriginal.indexOf("2")<0 || isApplicableDataForDigits(filter.digits, repeats("2",pifagorResult.count2))) &&
+          (filterOriginal.indexOf("3")<0 || isApplicableDataForDigits(filter.digits, repeats("3",pifagorResult.count3))) &&
+          (filterOriginal.indexOf("4")<0 || isApplicableDataForDigits(filter.digits, repeats("4",pifagorResult.count4))) &&
+          (filterOriginal.indexOf("5")<0 || isApplicableDataForDigits(filter.digits, repeats("5",pifagorResult.count5))) &&
+          (filterOriginal.indexOf("6")<0 || isApplicableDataForDigits(filter.digits, repeats("6",pifagorResult.count6))) &&
+          (filterOriginal.indexOf("7")<0 || isApplicableDataForDigits(filter.digits, repeats("7",pifagorResult.count7))) &&
+          (filterOriginal.indexOf("8")<0 || isApplicableDataForDigits(filter.digits, repeats("8",pifagorResult.count8))) &&
+          (filterOriginal.indexOf("9")<0 || isApplicableDataForDigits(filter.digits, repeats("9",pifagorResult.count9))) 
+        ) {
+			result = true;       		
+        } else {
+			//result = false;
+			return false;
+		}
+    }
+	
+	if(filter.digitsAbsent && filter.digitsAbsent.length > 0) {
+	
+		var filterOriginal = document.getElementById("filterAbsent").value;
+	
+        if(
+          (filterOriginal.indexOf("1")<0 || pifagorResult.count1 <= 0) &&
+          (filterOriginal.indexOf("2")<0 || pifagorResult.count2 <= 0) &&
+          (filterOriginal.indexOf("3")<0 || pifagorResult.count3 <= 0) &&
+          (filterOriginal.indexOf("4")<0 || pifagorResult.count4 <= 0) &&
+          (filterOriginal.indexOf("5")<0 || pifagorResult.count5 <= 0) &&
+          (filterOriginal.indexOf("6")<0 || pifagorResult.count6 <= 0) &&
+          (filterOriginal.indexOf("7")<0 || pifagorResult.count7 <= 0) &&
+          (filterOriginal.indexOf("8")<0 || pifagorResult.count8 <= 0) &&
+          (filterOriginal.indexOf("9")<0 || pifagorResult.count9 <= 0)
+        ) {
+			result = true;       		
+        } else {
+			//result = false;
+			return false;
+		}
+    }
+	
+	if(filter.names && filter.names.length > 0) {
+	
+		var searchResultForName = false;
+		for(var i = 0; i < filter.names.length; i++) {
+			if(pifagorResult.personName.toLowerCase().indexOf(filter.names[i].toLowerCase()) > -1) {
+				searchResultForName = true;  
+				break;
+			}
+		}
+		
+		if(searchResultForName == false) {
+			return false;
+		}
+    }
+	
+	if(!isApplicableData(filter.soulLevels, pifagorResult.A)) {
+		return false;
+	}
+	
+	if(!isApplicableData(filter.days, pifagorResult.day)) {
+		return false;
+	}
+	
+	if(!isApplicableData(filter.months, pifagorResult.month)) {
+		return false;
+	}
+	
+	if(!isApplicableData(filter.years, pifagorResult.year)) {
+		return false;
+	}
+	
+	if(!isApplicableData(filter.stolb1s, pifagorResult.stolb1)) {
+		return false;
+	}
+	
+	if(!isApplicableData(filter.stolb2s, pifagorResult.stolb2)) {
+		return false;
+	}
+	
+	if(!isApplicableData(filter.flowUp, pifagorResult.flowUp)) {
+		return false;
+	}
+	
+	if(!isApplicableData(filter.flowDown, pifagorResult.flowDown)) {
+		return false;
+	}
+	
+	if(filter.flowUpBool == false && pifagorResult.flowUp > pifagorResult.flowDown) {
+		return false;
+	}
+	
+	if(filter.flowDownBool == false && pifagorResult.flowDown > pifagorResult.flowUp) {
+		return false;
+	}
+	
+	if(filter.flowEquals == false && pifagorResult.flowUp == pifagorResult.flowDown) {
+		return false;
+	}
+	
+	if(filter.psyType1 == false && pifagorResult.psyType == 1) {
+		return false;
+	}
+	
+	if(filter.psyType2 == false && pifagorResult.psyType == 2) {
+		return false;
+	}
+	
+	if(filter.psyType3 == false && pifagorResult.psyType == 3) {
+		return false;
+	}
+	
+    return result;
+}
+
+function isApplicableData(dataArray, dataVal) {
+
+	if(dataArray && dataArray.length > 0) {
+		try {
+			var searchResult = false;
+			for(var i = 0; i < dataArray.length; i++) {
+				var filterDataItem = dataArray[i];
+				var filterDataItemSplitted = filterDataItem.split("-");
+				var minLevel = parseInt(filterDataItemSplitted[0]);
+				var maxLevel = parseInt(filterDataItemSplitted.length >= 2 ? filterDataItemSplitted[1] : filterDataItemSplitted[0]);
+				var dataValInt = parseInt(dataVal);
+				
+				if(between(dataValInt, minLevel, maxLevel)) {
+					searchResult = true;  
+					break;
+				}
+			}
+			
+			if(searchResult == false) {
+				return false;
+			}
+		} catch (err) {
+			console.log("Что-то не верно в фильтре" + err);
+			return true;
+		}
+	}
+	
+	return true;
+}
+
+function isApplicableDataForDigits(dataArray, dataVal) {
+
+	if(dataArray && dataArray.length > 0) {
+		try {
+			var searchResult = false;
+			for(var i = 0; i < dataArray.length; i++) {
+				var filterDataItem = dataArray[i];
+				if(filterDataItem.indexOf(dataVal.substr(0,1)) < 0) {
+					continue;
+				}
+				var filterDataItemSplitted = filterDataItem.split("-");
+				var minLevel = parseInt(filterDataItemSplitted[0].length);
+				var maxLevel = parseInt(filterDataItemSplitted.length >= 2 ? filterDataItemSplitted[1].length : filterDataItemSplitted[0].length);
+				var dataValInt = parseInt(dataVal.length);
+				
+				if(between(dataValInt, minLevel, maxLevel)) {
+					searchResult = true;  
+					break;
+				}
+			}
+			
+			if(searchResult == false) {
+				return false;
+			}
+		} catch (err) {
+			console.log("Что-то не верно в фильтре" + err);
+			return true;
+		}
+	}
+	
+	return true;
+}
+
+function calcPifagors() {
+	document.getElementById("resultMsg").value = "";
+
+	clearPifagorTables();
+    
+	var countRows = 0;
+	var countBirthdays = 0;
+	var countCalculatedBirthdaysWithErrors = 0;
+	var countCalculatedBirthdaysWithoutErrors = 0;
+	var countFiltered = 0;
+	
+    var errors = [];
+	var dataBirthdays = document.getElementById("myTextarea").value.split('\n');
+	var filter = getFilterData();
+	var currentTableId = undefined;
+	countRows = dataBirthdays.length;
+	for(var i = 0 ; i < dataBirthdays.length;i++){
+		if(dataBirthdays[i] && dataBirthdays[i].trim()) {
+			countBirthdays++;
+			dataBirthday = dataBirthdays[i].trim();
+			dataBirthdayArray = dataBirthday.split(";");
+			var result = calcPifagor(dataBirthdayArray[0], dataBirthdayArray[1]);
+			if(result.errors.length > 0) {
+				countCalculatedBirthdaysWithErrors++;
+				errors.push(result.errors);
+			} else {
+				countCalculatedBirthdaysWithoutErrors++;
+				if(isApplicableForFilter(filter, result)) {
+					countFiltered++;
+					if(currentTableId == undefined) {
+						currentTableId = result.id;
+						generatePifagorTable(result.id);
+						fillData(result, 0, 0);
+					} else {
+						result.id = currentTableId;
+						currentTableId = undefined;
+						fillData(result, 1, 6);
+					}
+				}
+			}
+		}
+	}
+    
+	/*
+    if(errors.length > 0) {
+    	alert(errors);
+    }
+	*/
+	
+	//var resultMsg = "Количество не пустых строк: " + countBirthdays + " количество ошибок:" + countCalculatedBirthdaysWithErrors + " количество без ошибок:" + countCalculatedBirthdaysWithoutErrors + " количество отфильтровано и показано:" + countFiltered;
+	
+	var resultMsg = "Количество: человек: " + countBirthdays + " /ошибок:" + countCalculatedBirthdaysWithErrors + " /без ошибок:" + countCalculatedBirthdaysWithoutErrors + " /отфильтровано и показано:" + countFiltered;
+	
+	document.getElementById("resultMsg").innerHTML  = resultMsg;
+	document.getElementById("resultError").innerHTML  = errors;
+	
+}
+
+  function SelectContent (el) {    
+    var aux = document.createElement("div");
+    aux.setAttribute("contentEditable", true);
+    aux.innerHTML = document.getElementById("copycontent").innerHTML;
+    aux.setAttribute("onfocus", "document.execCommand('selectAll',false,null)"); 
+    document.body.appendChild(aux);
+    aux.focus();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
+  }
+
+  function generatePifagorTable(index) {
+    var myTable = document.getElementById("tmpl");
+    var myClone = myTable.cloneNode(true);
+    myClone.style.display = "inline-block";
+    myClone.id = pifagorTablePrefix + index;
+    var tables = document.getElementById("tables");
+    tables.appendChild(myClone);
+  }
+  
+var myTable = document.getElementById("tmpl");
+myTable.style.display = "none";
+
+calcPifagors();
+</script>
+
+</body>
+
+</html>
