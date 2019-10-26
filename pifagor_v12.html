@@ -682,6 +682,11 @@
                                            onclick="showHideBirthdays();">
                                     <label class="custom-control-label" for="filterHideBirthdays">Скрыть Даты Рождения</label>
                                 </div>
+								<div class="custom-control custom-checkbox">
+                                    <input id="filterHideAge" name="paymentMethod" type="checkbox" class="custom-control-input"
+                                           onclick="showHideAge();">
+                                    <label class="custom-control-label" for="filterHideAge">Скрыть Количество Лет</label>
+                                </div>
                             </div>
 
                         </div>
@@ -858,6 +863,7 @@
         document.getElementById('filterHideAdditionalDigits').checked = "checked";
         document.getElementById('filterHideNames').checked = "";
         document.getElementById('filterHideBirthdays').checked = "";
+        document.getElementById('filterHideAge').checked = "";
         clearPifagorTables();
         document.getElementById("resultMsg").innerHTML = "";
         document.getElementById("resultMsg").style.display = "none";
@@ -1891,6 +1897,10 @@
         hadMode = hadMode == 0 ? 1 : 0;
         calcPifagors();
     }
+	
+	function showHideAge() {
+        calcPifagors();
+    }
 
     function showHideNames() {
         hideNamesMode = hideNamesMode == 0 ? 1 : 0;
@@ -2148,6 +2158,10 @@
     function showAD(result) {
         return hadMode == 0 ? result : '';
     }
+	
+	function showAge(result) {
+        return document.getElementById('filterHideAge').checked ? '' : result;
+    }
 
     function showName(result) {
         return hideNamesMode == 0 ? result : '';
@@ -2194,7 +2208,7 @@
         setData(table, rowIndex, 1 + colIndx2, showBirthdays(result.month));
         setData(table, rowIndex, 2 + colIndx2, showBirthdays(result.year));
         setData(table, rowIndex, 3 + colIndx2, result.A); //'А=' + A;
-		setData(table, rowIndex, 5 + colIndx2, showAD(result.age)); //'age=' + age;
+		setData(table, rowIndex, 5 + colIndx2, showAge(result.age)); //'age=' + age;
 
         // 2 row
         rowIndex++;
